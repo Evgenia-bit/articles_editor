@@ -1,6 +1,6 @@
 {
-    "name": "articles_editor",
-    "short_name": "articles_editor",
+    "name": "artus",
+    "short_name": "artus",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

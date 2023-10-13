@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "articles_editor" "\0"
+            VALUE "FileDescription", "artus" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "articles_editor" "\0"
+            VALUE "InternalName", "artus" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "articles_editor.exe" "\0"
-            VALUE "ProductName", "articles_editor" "\0"
+            VALUE "OriginalFilename", "artus.exe" "\0"
+            VALUE "ProductName", "artus" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

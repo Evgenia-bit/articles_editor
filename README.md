@@ -1,4 +1,4 @@
-# articles_editor
+# artus
 
 A new Flutter project.
 

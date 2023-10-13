@@ -1,4 +1,4 @@
-package com.example.articles_editor
+package com.example.artus
 
 import io.flutter.embedding.android.FlutterActivity
 
