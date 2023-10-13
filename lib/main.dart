@@ -1,17 +1,26 @@
+import 'package:artus/feature/data/repository.dart';
+import 'package:artus/feature/presentation/widget_component.dart';
 import 'package:flutter/material.dart';
-
 void main() {
-  runApp(const App());
+  runApp(const MyApp());
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
-
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      text: const TextSpan(
-        text: 'test 2',
+    final repository = CounterRepository(counter: 0);
+
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: CounterWidgetComponent(
+        decrementCounterUseCase: repository,
+        incrementCounterUseCase: repository,
+        getCounterUseCase: repository,
       ),
     );
   }
