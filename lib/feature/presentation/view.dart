@@ -1,10 +1,10 @@
 import 'package:artus/core/widget_view.dart';
 import 'package:artus/feature/presentation/component.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CounterView extends WidgetView<CounterComponent> {
-    const CounterView(CounterComponent component, {Key? key})
-      : super(component, key: key);
+  const CounterView(super.component, {super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,8 +12,8 @@ class CounterView extends WidgetView<CounterComponent> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-             const Text(
-              'You have pushed the button this many times:',
+            Text(
+              AppLocalizations.of(context)!.text,
             ),
             ValueListenableBuilder<int>(
               valueListenable: component.counterState,
@@ -27,23 +27,22 @@ class CounterView extends WidgetView<CounterComponent> {
           ],
         ),
       ),
-       floatingActionButton: Column(
+      floatingActionButton: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           FloatingActionButton(
             onPressed: component.onIncreasePressed,
-            tooltip: 'Increment',
+            tooltip: AppLocalizations.of(context)!.increment,
             child: const Icon(Icons.add),
           ),
           const SizedBox(height: 8),
           FloatingActionButton(
             onPressed: component.onDecreasePressed,
-            tooltip: 'Decrement',
+            tooltip: AppLocalizations.of(context)!.decrement,
             child: const Icon(Icons.remove),
           ),
         ],
       ),
     );
-  
   }
 }
