@@ -10,7 +10,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
-      text: TextSpan(
+      text: const TextSpan(
         text: 'test 2',
       ),
     );
