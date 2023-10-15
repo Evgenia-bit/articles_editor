@@ -1,7 +1,7 @@
 import 'package:artus/core/widget_view.dart';
 import 'package:artus/feature/presentation/component.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:localizations/localizations.dart';
 
 class CounterView extends WidgetView<CounterComponent> {
   const CounterView(super.component, {super.key});

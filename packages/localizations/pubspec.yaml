@@ -1,0 +1,24 @@
+name: localizations
+description: Localization for atrus.
+publish_to: 'none'
+
+version: 1.0.0
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  generate: true
+flutter_intl:
+  enabled: true

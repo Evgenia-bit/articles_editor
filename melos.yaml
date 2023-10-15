@@ -1,0 +1,25 @@
+name: artus
+
+packages:
+  - packages/*
+
+command:
+  bootstrap:
+    hooks:
+      post: melos run generate_localizations
+
+scripts:
+  analyze:
+    run: melos exec -- "flutter analyze ."
+    description: Run `flutter analyze` in all packages
+    
+  format:
+    run: melos exec -- "flutter format . --set-exit-if-changed"
+    description: Run `flutter format .` in all packages
+
+  generate_localizations:
+    run: cd packages/localizations && flutter gen-l10n
+    description: Generates localizations files.
+
+
+
