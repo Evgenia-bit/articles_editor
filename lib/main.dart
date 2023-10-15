@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final repository = CounterRepository(counter: 0);
 
-
     return MaterialApp(
       localizationsDelegates: const [
         AppLocalizations.delegate,
