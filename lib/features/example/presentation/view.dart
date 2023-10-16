@@ -1,5 +1,5 @@
 import 'package:artus/core/widget_view.dart';
-import 'package:artus/feature/presentation/component.dart';
+import 'package:artus/features/example/presentation/component.dart';
 import 'package:flutter/material.dart';
 import 'package:localizations/localizations.dart';
 

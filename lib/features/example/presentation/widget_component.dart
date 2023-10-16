@@ -1,9 +1,9 @@
 
 import 'package:artus/core/component_state.dart';
 import 'package:artus/core/widget_view.dart';
-import 'package:artus/feature/domain/use_case.dart';
-import 'package:artus/feature/presentation/component.dart';
-import 'package:artus/feature/presentation/view.dart';
+import 'package:artus/features/example/domain/use_case.dart';
+import 'package:artus/features/example/presentation/component.dart';
+import 'package:artus/features/example/presentation/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/change_notifier.dart';
 

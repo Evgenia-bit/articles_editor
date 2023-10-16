@@ -1,4 +1,4 @@
-import 'package:artus/feature/domain/use_case.dart';
+import 'package:artus/features/example/domain/use_case.dart';
 
 class CounterRepository
     implements
