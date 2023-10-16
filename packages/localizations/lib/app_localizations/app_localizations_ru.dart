@@ -11,5 +11,5 @@ class AppLocalizationsRu extends AppLocalizations {
   String get decrement => 'Уменьшить';
 
   @override
-  String get text => 'Вы нажимали на кнопку раз:';
+  String get text => 'Вы нажимали на кнопку столько раз:';
 }
