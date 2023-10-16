@@ -1,6 +1,6 @@
 import 'package:artus/features/example/domain/use_case.dart';
 import 'package:artus/features/example/presentation/component.dart';
-import 'package:artus/features/example/presentation/view.dart';
+import 'package:artus/features/presentation/view.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 

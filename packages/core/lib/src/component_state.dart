@@ -1,4 +1,4 @@
-import 'package:artus/core/widget_view.dart';
+import 'package:core/src/widget_view.dart';
 import 'package:flutter/widgets.dart';
 
 /// An abstract class that represents the state of a component.
