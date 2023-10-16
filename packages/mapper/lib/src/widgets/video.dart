@@ -6,10 +6,10 @@ class Video extends StatefulWidget {
   const Video({required this.uri, super.key});
 
   @override
-  _VideoState createState() => _VideoState();
+  VideoState createState() => VideoState();
 }
 
-class _VideoState extends State<Video> {
+class VideoState extends State<Video> {
   late VideoPlayerController _controller;
 
   @override
