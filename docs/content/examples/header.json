@@ -1,0 +1,7 @@
+{
+    "type": "header",
+    "data": {
+        "text": "Header example",
+        "level": 3
+    }
+}
