@@ -5,12 +5,12 @@
 - `compat`- the block that will be displayed if a old version is used, optional, `Map<String, dynamic>`.
 
 
-## Header Block Structure
+## Heading Block Structure
 
- - `type`: `header`
+ - `type`: `heading`
  - `data`
-    - `text` - header content, required, `String`.
-    - `level` - header level from 1 to 3, required, `int`. 
+    - `text` - heading content, required, `String`.
+    - `level` - heading level from 1 to 3, required, `int`. 
 
 ## Paragraph Block Structure
 
