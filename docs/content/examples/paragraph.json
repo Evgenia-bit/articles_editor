@@ -1,0 +1,23 @@
+{
+    "type": "paragraph",
+    "data": {
+        "children": [
+            {
+                "text": "Paragraph item example",
+                "style": {
+                    "is_bold": true,
+                    "is_italic": true,
+                    "is_monospaced": true
+                }
+            },
+            {
+                "text": "Paragraph item example",
+                "style": {
+                    "is_bold": false,
+                    "is_italic": true,
+                    "is_underline": false
+                }
+            }
+        ]
+    }
+}
