@@ -18,7 +18,7 @@
                         "style": {
                             "is_bold": false,
                             "is_italic": true,
-                            "is_underline": false
+                            "is_monospaced": false
                         }
                     }
                 ]
@@ -38,7 +38,7 @@
                         "style": {
                             "is_bold": false,
                             "is_italic": true,
-                            "is_underline": false
+                            "is_monospaced": false
                         }
                     }
                 ]
