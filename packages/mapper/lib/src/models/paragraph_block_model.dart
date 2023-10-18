@@ -1,32 +1,54 @@
 import 'package:mapper/src/models/block_model.dart';
 
-abstract class ParagraphBlockModel extends BlockModel {}
+abstract class ParagraphBlockModel extends BlockModel {
+  abstract final List<ParagraphItem> children;
+}
+
+abstract class ParagraphItem {
+  abstract final String text;
+  abstract final ParagraphItemStyle style;
+}
+
+abstract class ParagraphItemStyle {
+  abstract final bool isBold;
+  abstract final bool isItalic;
+  abstract final bool isMonospaced;
+}
 
 class CustomParagraphBlockModel extends ParagraphBlockModel {
-  late final List<ParagraphItem> _children;
+  @override
+  late final List<ParagraphItem> children;
 
   CustomParagraphBlockModel.fromJson(Map<String, dynamic> json) {
-    _children = _childrenFromJson(json['children']);
+    children = _childrenFromJson(json['children']);
   }
 
   List<ParagraphItem> _childrenFromJson(children) {
-    if (children is! List<Map<String, dynamic>>) return [];
-    return children.map((item) => ParagraphItem.fromJson(item)).toList();
+    return (children as List<Map<String, dynamic>>).map(CustomParagraphItem.fromJson).toList();
   }
 }
 
-class ParagraphItem {
-  final String _text;
-  final ParagraphItemStyle _style;
-  ParagraphItem.fromJson(Map<String, dynamic> json)
-      : _text = json['text'] is String ? json['text'] as String : '',
-      _style = json['style'];
-} 
+class CustomParagraphItem extends ParagraphItem {
+  @override
+  final String text;
+  @override
+  final ParagraphItemStyle style;
 
+  CustomParagraphItem.fromJson(Map<String, dynamic> json)
+      : text = json['text'] as String,
+        style = CustomParagraphItemStyle.fromJson(json['style'] as Map<String, bool>);
+}
 
-class ParagraphItemStyle {
-  final bool _isBold;
-  final bool _isItalic;
-  final bool _isMonospaced;
-  ParagraphItemStyle.fromJson(Map<String, bool> json);
+class CustomParagraphItemStyle extends ParagraphItemStyle {
+  @override
+  final bool isBold;
+  @override
+  final bool isItalic;
+  @override
+  final bool isMonospaced;
+
+  CustomParagraphItemStyle.fromJson(Map<String, bool> json)
+      : isBold = json['is_bold'] ?? false,
+        isItalic = json['is_italic'] ?? false,
+        isMonospaced = json['is_monospaced'] ?? false;
 }

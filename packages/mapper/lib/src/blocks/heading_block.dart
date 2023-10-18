@@ -1,0 +1,19 @@
+import 'package:flutter/widgets.dart';
+import 'package:mapper/src/blocks/block.dart';
+import 'package:mapper/src/models/heading_block_model.dart';
+
+class HeadingBlock extends Block<HeadingBlockModel> {
+  HeadingBlock(super.model);
+
+  @override
+  Widget buildWidget() {
+    return Text(
+      model.text,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 20.0 * model.level,
+      ),
+    );
+  }
+}
