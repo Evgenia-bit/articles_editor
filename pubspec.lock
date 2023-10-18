@@ -9,6 +9,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.2+1"
+  api:
+    dependency: "direct main"
+    description:
+      path: "packages/api"
+      relative: true
+    source: path
+    version: "1.0.0"
   args:
     dependency: transitive
     description:
