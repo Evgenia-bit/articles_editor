@@ -3,7 +3,6 @@ import 'package:artus/features/example/presentation/widget_component.dart';
 import 'package:flutter/material.dart';
 import 'package:localizations/localizations.dart';
 
-
 void main() {
   runApp(const MyApp());
 }

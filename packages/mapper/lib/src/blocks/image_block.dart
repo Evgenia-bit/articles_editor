@@ -8,7 +8,7 @@ class ImageBlock extends Block<ImageBlockModel> {
   @override
   Widget buildWidget(BuildContext context) {
     if (model.url == null) return const SizedBox.shrink();
-    
+
     return Image.network(
       model.url!,
       fit: BoxFit.contain,
