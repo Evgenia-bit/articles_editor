@@ -6,7 +6,7 @@ class ParagraphBlock extends Block<ParagraphBlockModel> {
   ParagraphBlock(super.model);
 
   @override
-  Widget buildWidget() {
+  Widget buildWidget(BuildContext context) {
     return RichText(
       text: TextSpan(
         children: _buildChildren(model.children),

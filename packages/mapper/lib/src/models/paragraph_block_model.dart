@@ -1,4 +1,5 @@
 import 'package:mapper/src/models/block_model.dart';
+import 'package:mapper/src/utils/safe_cast.dart';
 
 abstract class ParagraphBlockModel extends BlockModel {
   abstract final List<ParagraphItem> children;
@@ -19,12 +20,14 @@ class CustomParagraphBlockModel extends ParagraphBlockModel {
   @override
   late final List<ParagraphItem> children;
 
-  CustomParagraphBlockModel.fromJson(Map<String, dynamic> json) {
-    children = _childrenFromJson(json['children']);
+  CustomParagraphBlockModel.fromJson(Map<String, dynamic>? json) {
+    children = _childrenFromJson(json?['children']);
   }
 
   List<ParagraphItem> _childrenFromJson(children) {
-    return (children as List<Map<String, dynamic>>).map(CustomParagraphItem.fromJson).toList();
+    final list = safeCast<List<Map<String, dynamic>>>(children);
+    if (list == null) return [];
+    return list.map(CustomParagraphItem.fromJson).toList();
   }
 }
 
@@ -35,8 +38,10 @@ class CustomParagraphItem extends ParagraphItem {
   final ParagraphItemStyle style;
 
   CustomParagraphItem.fromJson(Map<String, dynamic> json)
-      : text = json['text'] as String,
-        style = CustomParagraphItemStyle.fromJson(json['style'] as Map<String, bool>);
+      : text = safeCast<String>(json['text']) ?? '',
+        style = CustomParagraphItemStyle.fromJson(
+          safeCast<Map<String, bool>>(json['style']),
+        );
 }
 
 class CustomParagraphItemStyle extends ParagraphItemStyle {
@@ -47,8 +52,8 @@ class CustomParagraphItemStyle extends ParagraphItemStyle {
   @override
   final bool isMonospaced;
 
-  CustomParagraphItemStyle.fromJson(Map<String, bool> json)
-      : isBold = json['is_bold'] ?? false,
-        isItalic = json['is_italic'] ?? false,
-        isMonospaced = json['is_monospaced'] ?? false;
+  CustomParagraphItemStyle.fromJson(Map<String, bool>? json)
+      : isBold = safeCast<bool>(json?['is_bold']) ?? false,
+        isItalic = safeCast<bool>(json?['is_italic']) ?? false,
+        isMonospaced = safeCast<bool>(json?['is_monospaced']) ?? false;
 }

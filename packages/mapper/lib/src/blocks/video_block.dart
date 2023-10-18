@@ -7,8 +7,9 @@ class VideoBlock extends Block<VideoBlockModel> {
   VideoBlock(super.model);
 
   @override
-  Widget buildWidget() {
-    final uri = Uri.parse(model.url);
+  Widget buildWidget(BuildContext context) {
+    final uri = Uri.tryParse(model.url ?? '');
+    if (uri == null) return const SizedBox.shrink();
     return Video(uri: uri);
   }
 }

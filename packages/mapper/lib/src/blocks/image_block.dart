@@ -6,9 +6,11 @@ class ImageBlock extends Block<ImageBlockModel> {
   ImageBlock(super.model);
 
   @override
-  Widget buildWidget() {
+  Widget buildWidget(BuildContext context) {
+    if (model.url == null) return const SizedBox.shrink();
+    
     return Image.network(
-      model.url,
+      model.url!,
       fit: BoxFit.contain,
     );
   }

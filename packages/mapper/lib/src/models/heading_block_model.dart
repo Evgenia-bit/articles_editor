@@ -1,4 +1,5 @@
 import 'package:mapper/src/models/block_model.dart';
+import 'package:mapper/src/utils/safe_cast.dart';
 
 abstract class HeadingBlockModel extends BlockModel {
   abstract final String text;
@@ -12,7 +13,7 @@ class CustomHeadingBlockModel extends HeadingBlockModel {
   @override
   final String text;
 
-  CustomHeadingBlockModel.fromJson(Map<String, dynamic> json)
-      : level = json['level'] as int,
-        text = json['text'] as String;
+  CustomHeadingBlockModel.fromJson(Map<String, dynamic>? json)
+      : level = safeCast<int>(json?['level']) ?? 1,
+        text = safeCast<String>(json?['text']) ?? '';
 }

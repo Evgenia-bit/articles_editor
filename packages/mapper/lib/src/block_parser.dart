@@ -4,16 +4,16 @@ import 'package:mapper/src/models/image_block_model.dart';
 import 'package:mapper/src/models/list_block_model.dart';
 import 'package:mapper/src/models/paragraph_block_model.dart';
 import 'package:mapper/src/models/video_block_model.dart';
+import 'package:mapper/src/utils/safe_cast.dart';
 
 class BlockParser {
   List<BlockModel?> fromJson(Map<String, dynamic> json) {
-    if (json['blocks'] is! List) return [];
+    final list = safeCast<List<Map<String, dynamic>>>(json['blocks']);
+    if (list == null) return [];
 
-    return (json['blocks'] as List).map((block) {
-      if (block is! Map<String, dynamic>) return null;
-
-      return typeMap[block['type']]
-          ?.call(block['data'] as Map<String, dynamic>);
+    return list.map((block) {
+      final data = safeCast<Map<String, dynamic>>(block['data']);
+      return typeMap[block['type']]?.call(data);
     }).toList();
   }
 }

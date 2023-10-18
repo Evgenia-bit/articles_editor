@@ -7,14 +7,17 @@ class Mapper {
 
   Mapper({required BlockParser blockParser}) : _blockParser = blockParser;
 
-  List<Widget> getWidgetsFromJson(Map<String, dynamic> json) {
+  List<Widget> getWidgetsFromJson(
+    Map<String, dynamic> json,
+    BuildContext context,
+  ) {
     final blockModels = _blockParser.fromJson(json);
 
     return blockModels
         .map(
           (model) => model == null
               ? const SizedBox.shrink()
-              : Block(model).buildWidget(),
+              : Block(model).buildWidget(context),
         )
         .toList();
   }

@@ -6,7 +6,7 @@ class ListBlock extends Block<ListBlockModel> {
   ListBlock(super.model);
 
   @override
-  Widget buildWidget() {
+  Widget buildWidget(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
       itemCount: model.items.length,
@@ -14,7 +14,7 @@ class ListBlock extends Block<ListBlockModel> {
         return Row(
           children: [
             if (model.isOrdered) Text('${index + 1}') else const Text('\u2022'),
-            Block(model.items[index]).buildWidget(),
+            Block(model.items[index]).buildWidget(context),
           ],
         );
       },

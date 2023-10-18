@@ -6,7 +6,7 @@ class HeadingBlock extends Block<HeadingBlockModel> {
   HeadingBlock(super.model);
 
   @override
-  Widget buildWidget() {
+  Widget buildWidget(BuildContext context) {
     return Text(
       model.text,
       textAlign: TextAlign.center,
