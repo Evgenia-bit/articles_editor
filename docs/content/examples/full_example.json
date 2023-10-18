@@ -17,16 +17,16 @@
                         "style": {
                             "is_bold": false,
                             "is_italic": true,
-                            "is_underline": false
+                            "is_monospaced": false
                         }
                     }
                 ]
             }
         },
         {
-            "type": "header",
+            "type": "heading",
             "data": {
-                "text": "Header example",
+                "text": "Heading example",
                 "level": 3
             }
         },
@@ -50,7 +50,7 @@
                                 "style": {
                                     "is_bold": false,
                                     "is_italic": true,
-                                    "is_underline": false
+                                    "is_monospaced": false
                                 }
                             }
                         ]
@@ -70,7 +70,7 @@
                                 "style": {
                                     "is_bold": false,
                                     "is_italic": true,
-                                    "is_underline": false
+                                    "is_monospaced": false
                                 }
                             }
                         ]

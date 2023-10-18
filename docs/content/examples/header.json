@@ -1,7 +1,7 @@
 {
-    "type": "header",
+    "type": "heading",
     "data": {
-        "text": "Header example",
+        "text": "Heading example",
         "level": 3
     }
 }

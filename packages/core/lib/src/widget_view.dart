@@ -29,7 +29,7 @@ abstract class WidgetView<C> extends StatelessWidget {
   /// Creates a new widget view with the given component.
   ///
   /// The [component] parameter must not be null.
-  const WidgetView(this.component, {Key? key}) : super(key: key);
+  const WidgetView(this.component, {super.key});
 
   /// Builds the visual representation of the component.
   ///
