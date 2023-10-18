@@ -10,5 +10,5 @@ class CustomImageBlockModel extends ImageBlockModel {
   final String? url;
 
   CustomImageBlockModel.fromJson(Map<String, dynamic>? json)
-      : url =  safeCast<String>(json?['url']);
+      : url = safeCast<String>(json?['url']);
 }
