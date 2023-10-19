@@ -17,15 +17,23 @@ class VideoState extends State<Video> {
     super.initState();
     _controller = VideoPlayerController.networkUrl(widget.uri)
       ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+        _controller
+          ..setLooping(true)
+          ..play();
         setState(() {});
       });
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_controller.value.isInitialized) return const SizedBox.shrink();
-    return VideoPlayer(_controller);
+    if (!_controller.value.isInitialized) return const SizedBox.shrink();
+    return Padding(
+      padding: const EdgeInsets.all(8),
+      child: AspectRatio(
+        aspectRatio: _controller.value.aspectRatio,
+        child: VideoPlayer(_controller),
+      ),
+    );
   }
 
   @override

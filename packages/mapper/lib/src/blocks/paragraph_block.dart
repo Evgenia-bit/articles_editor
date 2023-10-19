@@ -9,6 +9,7 @@ class ParagraphBlock extends Block<ParagraphBlockModel> {
   Widget buildWidget(BuildContext context) {
     return RichText(
       text: TextSpan(
+        style: const TextStyle(color: Color(0xFF000000)),
         children: _buildChildren(model.children),
       ),
     );
@@ -20,6 +21,7 @@ class ParagraphBlock extends Block<ParagraphBlockModel> {
           (child) => TextSpan(
             text: child.text,
             style: TextStyle(
+              fontFamily: child.style.isMonospaced ? 'RobotoMono' : null,
               fontWeight:
                   child.style.isBold ? FontWeight.bold : FontWeight.normal,
               fontStyle:
