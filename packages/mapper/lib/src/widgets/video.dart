@@ -17,8 +17,9 @@ class VideoState extends State<Video> {
     super.initState();
     _controller = VideoPlayerController.networkUrl(widget.uri)
       ..initialize().then((_) {
-        _controller..setLooping(true)
-        ..play();
+        _controller
+          ..setLooping(true)
+          ..play();
         setState(() {});
       });
   }
