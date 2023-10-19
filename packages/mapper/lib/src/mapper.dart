@@ -6,15 +6,14 @@ class Mapper {
 
   Mapper({required BlockParser blockParser}) : _blockParser = blockParser;
 
-  List<Block> getWidgetsFromJson(
-    Map<String, dynamic> json,
-  ) {
+  List<Block> getBlocksFromJson(Map<String, dynamic> json) {
     final blockModels = _blockParser.fromJson(json);
     final blocks = <Block>[];
 
     for (final model in blockModels) {
       if (model == null) continue;
-      blocks.add(Block(model));
+      final block = modelBlockMap[model.runtimeType]?.call(model);
+      if (block != null) blocks.add(block);
     }
 
     return blocks;
