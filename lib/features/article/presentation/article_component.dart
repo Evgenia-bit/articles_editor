@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:mapper/mapper.dart';
 
 abstract class ArticleComponent {
-  List<Widget> get widgetsList;
+  List<Block> get blocks;
 }

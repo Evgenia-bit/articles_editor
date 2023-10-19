@@ -1,5 +1,5 @@
-import 'package:artus/features/example/data/repository.dart';
-import 'package:artus/features/example/presentation/widget_component.dart';
+import 'package:artus/features/article/data/article_repository.dart';
+import 'package:artus/features/article/presentation/widget_component.dart';
 import 'package:flutter/material.dart';
 import 'package:localizations/localizations.dart';
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    final repository = CounterRepository(counter: 0);
+    final repository = ArticleRepository(articleId: 1);
 
     return MaterialApp(
       localizationsDelegates: const [
@@ -26,10 +26,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: CounterWidgetComponent(
-        decrementCounterUseCase: repository,
-        incrementCounterUseCase: repository,
-        getCounterUseCase: repository,
+      home: ArticleWidgetComponent(
+        getArticleBlocksUseCase: repository,
       ),
     );
   }

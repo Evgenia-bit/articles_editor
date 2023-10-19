@@ -9,9 +9,12 @@ class ImageBlock extends Block<ImageBlockModel> {
   Widget buildWidget(BuildContext context) {
     if (model.url == null) return const SizedBox.shrink();
 
-    return Image.network(
-      model.url!,
-      fit: BoxFit.contain,
+    return Padding(
+      padding: const EdgeInsets.all(8),
+      child: Image.network(
+        model.url!,
+        fit: BoxFit.contain,
+      ),
     );
   }
 }

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:mapper/mapper.dart';
 
-abstract interface class GetArticleUseCase {
-  List<Widget> get widgetsList;
+abstract interface class GetArticleBlocksUseCase {
+  List<Block> get blocks;
 }
