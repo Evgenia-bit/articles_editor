@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class AppBar extends StatelessWidget {
@@ -21,9 +22,14 @@ class AppBar extends StatelessWidget {
                 children: [
                   if (automaticallyImplyLeading)
                     const Expanded(
-                      child: _BackButton(),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: _BackButton(),
+                      ),
                     ),
-                  _AppBarTitle(title: title),
+                  Expanded(
+                    child: _AppBarTitle(title: title),
+                  ),
                   const Spacer(),
                 ],
               )
@@ -44,13 +50,10 @@ class _BackButton extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: GestureDetector(
         onTap: () => Navigator.of(context).pop(),
-        child: const Text(
-          '\u276E',
-          style: TextStyle(
-            color: Color(0xFF000000),
-            decoration: TextDecoration.none,
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
+        child: const Icon(
+          IconData(
+            0xe093,
+            fontFamily: 'MaterialIcons',
           ),
         ),
       ),
@@ -67,6 +70,7 @@ class _AppBarTitle extends StatelessWidget {
     return Text(
       title,
       textAlign: TextAlign.center,
+      overflow: TextOverflow.ellipsis,
       style: const TextStyle(
         color: Color(0xFF000000),
         decoration: TextDecoration.none,
