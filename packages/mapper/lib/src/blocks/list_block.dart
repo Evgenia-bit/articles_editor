@@ -1,4 +1,3 @@
-
 import 'package:flutter/widgets.dart';
 import 'package:mapper/src/blocks/block.dart';
 import 'package:mapper/src/blocks/paragraph_block.dart';
