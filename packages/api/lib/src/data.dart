@@ -21,7 +21,7 @@ const data = [
         'data': {
           'children': [
             {
-              'text': 'When is the Spring season?\n',
+              'text': 'When is the Spring season?\n\n',
               'style': {
                 'is_bold': true,
                 'is_italic': true,
@@ -30,7 +30,7 @@ const data = [
             },
             {
               'text':
-                  'Spring is the season succeeding Winter and preceding Summer. Spring refers to the season as well as to ideas of rebirth, rejuvenation, renewal, resurrection, and regrowth. During spring an important celebration takes place: Easter Day. It varies between March 22 and April 25 in Western tradition, and between April 4 and May 8 in Eastern Christianity.\n',
+                  'Spring is the season succeeding Winter and preceding Summer. Spring refers to the season as well as to ideas of rebirth, rejuvenation, renewal, resurrection, and regrowth. During spring an important celebration takes place: Easter Day. It varies between March 22 and April 25 in Western tradition, and between April 4 and May 8 in Eastern Christianity.\n\n',
               'style': {
                 'is_bold': false,
                 'is_italic': false,
@@ -38,7 +38,7 @@ const data = [
               }
             },
             {
-              'text': 'What happens in spring?\n',
+              'text': 'What happens in spring?\n\n',
               'style': {
                 'is_bold': true,
                 'is_italic': true,
@@ -47,7 +47,7 @@ const data = [
             },
             {
               'text':
-                  'Spring is a time when flowers bloom and trees begin to grow and reproduce. The days grow longer and the temperature in most areas becomes more temperate. You can also contemplate the melting of ice and thawing of the ground. The weather during this period becomes much sunnier while hibernating animals begin to come out of hibernation.\n',
+                  'Spring is a time when flowers bloom and trees begin to grow and reproduce. The days grow longer and the temperature in most areas becomes more temperate. You can also contemplate the melting of ice and thawing of the ground. The weather during this period becomes much sunnier while hibernating animals begin to come out of hibernation.\n\n',
               'style': {
                 'is_bold': false,
                 'is_italic': false,
@@ -55,7 +55,7 @@ const data = [
               }
             },
             {
-              'text': 'What to do during the Spring Season?\n',
+              'text': 'What to do during the Spring Season?\n\n',
               'style': {
                 'is_bold': true,
                 'is_italic': true,
@@ -63,7 +63,7 @@ const data = [
               }
             },
             {
-              'text': 'There are so many things to do to enjoy spring:\n',
+              'text': 'There are so many things to do to enjoy spring:',
               'style': {
                 'is_bold': false,
                 'is_italic': false,

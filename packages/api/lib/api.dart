@@ -1,1 +1,3 @@
-export '/src/api.dart';
+import 'package:api/src/api.dart';
+
+final api = API();
