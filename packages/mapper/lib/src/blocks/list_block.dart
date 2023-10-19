@@ -19,13 +19,8 @@ class ListBlock extends Block<ListBlockModel> {
             if (model.isOrdered)
               Text('${index + 1}')
             else
-              const Text(
-                '\u2022',
-                style: TextStyle(
-                  color: Color(0xFF000000),
-                  decoration: TextDecoration.none,
-                  fontSize: 20,
-                ),
+              const Icon(
+                IconData(0xe163, fontFamily: 'MaterialIcons'),
               ),
             Expanded(
               child: ParagraphBlock(model.items[index]).buildWidget(context),
