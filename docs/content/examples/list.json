@@ -1,0 +1,48 @@
+{
+    "type": "list",
+    "data": {
+        "is_ordered": true,
+        "items": [
+            {
+                "children": [
+                    {
+                        "text": "List item example",
+                        "style": {
+                            "is_bold": true,
+                            "is_italic": true,
+                            "is_monospaced": true
+                        }
+                    },
+                    {
+                        "text": "List item example",
+                        "style": {
+                            "is_bold": false,
+                            "is_italic": true,
+                            "is_monospaced": false
+                        }
+                    }
+                ]
+            },
+            {
+                "children": [
+                    {
+                        "text": "List item example",
+                        "style": {
+                            "is_bold": true,
+                            "is_italic": true,
+                            "is_monospaced": true
+                        }
+                    },
+                    {
+                        "text": "List item example",
+                        "style": {
+                            "is_bold": false,
+                            "is_italic": true,
+                            "is_monospaced": false
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
