@@ -27,7 +27,7 @@
 
 - `type`: `list`
 - `data`
-    - `is_ordered` - indicate whether the list is ordered or unordered, required, `bool`.
+    - `type` - the type of list that is converted to an enumeration variant, required, `String`. Can take the value `ORDERED` or `BULLETED`.
     - `items` - items of the list, required, List<Map<String, dynamic>>. Each item corresponds to the value of the "data" field of the [paragraph](#paragraph-block-structure).
 
 
