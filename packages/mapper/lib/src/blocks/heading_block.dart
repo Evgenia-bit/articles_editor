@@ -9,7 +9,6 @@ class HeadingBlock extends Block<HeadingBlockModel> {
   Widget buildWidget(BuildContext context) {
     return Text(
       model.text,
-      textAlign: TextAlign.center,
       style: TextStyle(
         color: const Color(0xFF000000),
         decoration: TextDecoration.none,

@@ -8,8 +8,16 @@ class ParagraphBlock extends Block<ParagraphBlockModel> {
   @override
   Widget buildWidget(BuildContext context) {
     return RichText(
+      overflow: TextOverflow.ellipsis,
+                softWrap: true,
+      textHeightBehavior: const TextHeightBehavior(
+          applyHeightToFirstAscent: false,
+          applyHeightToLastDescent: true,
+          leadingDistribution: TextLeadingDistribution.proportional),
       text: TextSpan(
-        style: const TextStyle(color: Color(0xFF000000)),
+        style: const TextStyle(
+          color: Color(0xFF000000),
+        ),
         children: _buildChildren(model.children),
       ),
     );
