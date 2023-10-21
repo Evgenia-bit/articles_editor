@@ -1,3 +1,2 @@
-import 'package:api/src/api.dart';
-
-final api = API();
+export 'src/api/articles/articles_api.dart';
+export 'src/api/articles/data/article_dto.dart';

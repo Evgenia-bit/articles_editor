@@ -1,5 +1,4 @@
-import 'package:mapper/src/block_parser.dart';
-import 'package:mapper/src/mapper.dart';
+export 'src/block_parser.dart';
 export 'src/blocks/block.dart';
-
-final mapper = Mapper(blockParser: BlockParser());
+export 'src/mapper.dart';
+export 'src/utils/safe_cast.dart';
