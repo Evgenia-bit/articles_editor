@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class AppBar extends StatelessWidget {
   final String title;
@@ -16,7 +15,7 @@ class AppBar extends StatelessWidget {
     return SizedBox(
       height: 70,
       child: ColoredBox(
-        color: const Color(0xFFFFFFFF),
+        color: Colors.white,
         child: automaticallyImplyLeading
             ? Row(
                 children: [
@@ -50,12 +49,7 @@ class _BackButton extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: GestureDetector(
         onTap: () => Navigator.of(context).pop(),
-        child: const Icon(
-          IconData(
-            0xe093,
-            fontFamily: 'MaterialIcons',
-          ),
-        ),
+        child: const Icon(Icons.arrow_back_ios),
       ),
     );
   }
