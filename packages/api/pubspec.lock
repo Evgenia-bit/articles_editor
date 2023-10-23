@@ -60,7 +60,7 @@ packages:
     source: hosted
     version: "2.1.1"
   mapper:
-    dependency: "direct main"
+    dependency: "direct overridden"
     description:
       path: "../mapper"
       relative: true

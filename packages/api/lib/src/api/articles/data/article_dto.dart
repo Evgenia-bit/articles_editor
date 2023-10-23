@@ -1,4 +1,4 @@
-import 'package:mapper/mapper.dart';
+import 'package:api/src/utils/safe_cast.dart';
 
 class ArticleDto {
   final int id;

@@ -1,8 +1,7 @@
 import 'dart:convert';
-
 import 'package:api/src/api/articles/data/article_dto.dart';
+import 'package:api/src/utils/safe_cast.dart';
 import 'package:flutter/services.dart';
-import 'package:mapper/mapper.dart';
 
 class ArticlesApi {
   Future<List<ArticleDto>> getAllArticles() async {
