@@ -33,15 +33,16 @@ class CustomParagraphBlockModel extends ParagraphBlockModel {
 
 class CustomParagraphItem extends ParagraphItem {
   @override
-  final String text;
+  late final String text;
   @override
   final ParagraphItemStyle style;
 
   CustomParagraphItem.fromJson(Map<String, dynamic> json)
-      : text = safeCast<String>(json['text']) ?? '',
-        style = CustomParagraphItemStyle.fromJson(
+      : style = CustomParagraphItemStyle.fromJson(
           safeCast<Map<String, bool>>(json['style']),
-        );
+        ) {
+    text = json['text'] as String;
+  }
 }
 
 class CustomParagraphItemStyle extends ParagraphItemStyle {

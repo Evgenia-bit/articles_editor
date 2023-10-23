@@ -26,7 +26,17 @@ class VideoState extends State<Video> {
 
   @override
   Widget build(BuildContext context) {
-    if (!_controller.value.isInitialized) return const SizedBox.shrink();
+    if (_controller.value.hasError) {
+      return Image.asset(
+        'packages/mapper/assets/no_video.png',
+        width: 250,
+      );
+    }
+
+    if (!_controller.value.isInitialized) {
+      return const SizedBox.shrink();
+    }
+
     return Padding(
       padding: const EdgeInsets.all(8),
       child: AspectRatio(

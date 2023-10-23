@@ -11,7 +11,6 @@ class Mapper {
     final blocks = <Block>[];
 
     for (final model in blockModels) {
-      if (model == null) continue;
       final block = modelBlockMap[model.runtimeType]?.call(model);
       if (block != null) blocks.add(block);
     }
