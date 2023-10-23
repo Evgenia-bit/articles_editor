@@ -1,8 +1,7 @@
-name: api
-description: Artus API
+name: ui_kit
 publish_to: 'none'
 
-version: 1.0.0
+version: 1.0.0+1
 
 environment:
   sdk: '>=3.1.0 <4.0.0'
@@ -11,8 +10,3 @@ dependencies:
   flutter:
     sdk: flutter
   surf_lint_rules: ^3.0.0
-
-flutter:
-  assets:
-    - assets/data.json
-

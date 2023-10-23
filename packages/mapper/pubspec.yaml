@@ -14,6 +14,9 @@ dependencies:
   video_player: ^2.7.2
 
 flutter:
+  assets:
+    - assets/no_image.png
+    - assets/no_video.png
   fonts:
     - family: RobotoMono
       fonts:
