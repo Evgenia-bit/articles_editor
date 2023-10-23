@@ -14,7 +14,7 @@ import 'package:mapper/src/models/video_block_model.dart';
 abstract class Block<T extends BlockModel> {
   final T model;
 
-  Block(this.model);
+  const Block(this.model);
 
   Widget buildWidget(BuildContext context);
 }
@@ -23,7 +23,14 @@ final Map<Type, Block<BlockModel> Function(BlockModel)> modelBlockMap = {
   CustomHeadingBlockModel: (model) => HeadingBlock(model as HeadingBlockModel),
   CustomParagraphBlockModel: (model) =>
       ParagraphBlock(model as ParagraphBlockModel),
-  CustomListBlockModel: (model) => ListBlock(model as ListBlockModel),
+  CustomListBlockModel: (model) =>
+      listTypeMap[(model as ListBlockModel).listType]?.call(model) ??
+      BulletedListBlock(model),
   CustomImageBlockModel: (model) => ImageBlock(model as ImageBlockModel),
   CustomVideoBlockModel: (model) => VideoBlock(model as VideoBlockModel),
+};
+
+final Map<ListType, ListBlock Function(ListBlockModel)> listTypeMap = {
+  ListType.ordered: OrderedListBlock.new,
+  ListType.bulleted: BulletedListBlock.new,
 };

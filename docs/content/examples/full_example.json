@@ -34,7 +34,7 @@
         {
             "type": "list",
             "data": {
-                "is_ordered": true,
+                "type": "BULLETED",
                 "items": [
                     {
                         "children": [
