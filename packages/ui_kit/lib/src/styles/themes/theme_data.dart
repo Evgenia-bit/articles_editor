@@ -20,6 +20,7 @@ abstract class AppThemeData {
       surface: _lightColorScheme.surface,
       onSurface: _lightColorScheme.onSurface,
     ),
+    fontFamily: _fontFamily,
     extensions: [_lightColorScheme, _textTheme],
   );
 
@@ -39,10 +40,12 @@ abstract class AppThemeData {
       surface: _darkColorScheme.surface,
       onSurface: _darkColorScheme.onSurface,
     ),
+    fontFamily: _fontFamily,
     extensions: [_darkColorScheme, _textTheme],
   );
 
   static const _lightColorScheme = AppColorScheme.light();
   static const _darkColorScheme = AppColorScheme.dark();
   static final _textTheme = AppTextTheme.base();
+  static const _fontFamily = 'Roboto';
 }

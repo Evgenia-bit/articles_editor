@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:ui_kit/src/styles/colors/color_scheme.dart';
+import 'package:ui_kit/src/styles/text/text_extention.dart';
 
-class AppBar extends StatelessWidget {
+class CustomAppBar extends StatelessWidget {
   final String title;
   final bool automaticallyImplyLeading;
 
-  const AppBar({
+  const CustomAppBar({
     required this.title,
     this.automaticallyImplyLeading = false,
     super.key,
@@ -15,7 +17,7 @@ class AppBar extends StatelessWidget {
     return SizedBox(
       height: 70,
       child: ColoredBox(
-        color: Colors.white,
+        color: AppColorScheme.of(context).background,
         child: automaticallyImplyLeading
             ? Row(
                 children: [
@@ -49,7 +51,10 @@ class _BackButton extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: GestureDetector(
         onTap: () => Navigator.of(context).pop(),
-        child: const Icon(Icons.arrow_back_ios),
+        child: Icon(
+          Icons.arrow_back_ios,
+          color: AppColorScheme.of(context).onBackground,
+        ),
       ),
     );
   }
@@ -65,12 +70,9 @@ class _AppBarTitle extends StatelessWidget {
       title,
       textAlign: TextAlign.center,
       overflow: TextOverflow.ellipsis,
-      style: const TextStyle(
-        color: Color(0xFF000000),
-        decoration: TextDecoration.none,
-        fontWeight: FontWeight.bold,
-        fontSize: 24,
-      ),
+      style: AppTextTheme.of(context).bold24.copyWith(
+            color: AppColorScheme.of(context).onBackground,
+          ),
     );
   }
 }
