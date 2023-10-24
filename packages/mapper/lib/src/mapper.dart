@@ -6,7 +6,7 @@ class Mapper {
 
   Mapper({required BlockParser blockParser}) : _blockParser = blockParser;
 
-  List<Block> getBlocksFromJson(Map<String, dynamic> json) {
+  List<Block> getBlocksFromJson(List<Map<String, dynamic>> json) {
     final blockModels = _blockParser.fromJson(json);
     final blocks = <Block>[];
 

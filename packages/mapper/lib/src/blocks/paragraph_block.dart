@@ -2,16 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:mapper/src/blocks/block.dart';
 import 'package:mapper/src/models/paragraph_block_model.dart';
 
-const String monospacedFontFamily = 'RobotoMono';
+const monospacedFontFamily = 'RobotoMono';
+const commonFontFamily = 'Roboto';
 
 class ParagraphBlock extends Block<ParagraphBlockModel> {
   ParagraphBlock(super.model);
 
   @override
   Widget buildWidget(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        style: const TextStyle(color: Colors.black),
+    return Text.rich(
+      TextSpan(
+        style: const TextStyle(
+          decoration: TextDecoration.none,
+          color: Colors.black,
+          fontSize: 16,
+        ),
         children: _buildChildren(model.children),
       ),
     );
@@ -23,8 +28,9 @@ class ParagraphBlock extends Block<ParagraphBlockModel> {
           (child) => TextSpan(
             text: child.text,
             style: TextStyle(
-              fontFamily:
-                  child.style.isMonospaced ? monospacedFontFamily : null,
+              fontFamily: child.style.isMonospaced
+                  ? monospacedFontFamily
+                  : commonFontFamily,
               fontWeight:
                   child.style.isBold ? FontWeight.bold : FontWeight.normal,
               fontStyle:

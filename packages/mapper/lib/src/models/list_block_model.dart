@@ -30,7 +30,8 @@ class CustomListBlockModel extends ListBlockModel {
   }
 
   List<ParagraphBlockModel> _itemsFromJson(items) {
-    final list = safeCast<List<Map<String, dynamic>>>(items);
+    final List<Map<String, dynamic>>? list =
+        safeCast<List<dynamic>>(items)?.cast();
     if (list == null) return [];
     return list.map(CustomParagraphBlockModel.fromJson).toList();
   }

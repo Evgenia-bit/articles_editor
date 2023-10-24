@@ -14,9 +14,12 @@ class BulletedListBlock extends ListBlock {
   Widget buildWidget(BuildContext context) {
     return CustomListView(
       items: model.items,
-      buildMarker: (_) => const Icon(
-        Icons.circle,
-        size: 5,
+      buildMarker: (_) => const Padding(
+        padding: EdgeInsets.only(top: 5),
+        child: Icon(
+          Icons.circle,
+          size: 8,
+        ),
       ),
     );
   }

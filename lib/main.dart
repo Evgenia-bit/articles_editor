@@ -1,7 +1,9 @@
+import 'package:api/api.dart';
 import 'package:artus/features/article/data/article_repository.dart';
 import 'package:artus/features/article/presentation/widget_component.dart';
 import 'package:flutter/material.dart';
 import 'package:localizations/localizations.dart';
+import 'package:mapper/mapper.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    final repository = ArticleRepository(articleId: 1);
+    final repository = ArticleRepository(articleId: 1, api: ArticlesApi());
 
     return MaterialApp(
       localizationsDelegates: const [
@@ -27,7 +29,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: ArticleWidgetComponent(
-        getArticleBlocksUseCase: repository,
+        getArticleIdUseCase: repository,
+        loadArticleUseCase: repository,
+        mapper: Mapper(blockParser: BlockParser()),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:mapper/src/blocks/block.dart';
+import 'package:mapper/src/blocks/paragraph_block.dart';
 import 'package:mapper/src/models/heading_block_model.dart';
 
 class HeadingBlock extends Block<HeadingBlockModel> {
@@ -14,7 +15,8 @@ class HeadingBlock extends Block<HeadingBlockModel> {
         color: const Color(0xFF000000),
         decoration: TextDecoration.none,
         fontWeight: FontWeight.bold,
-        fontSize: 20.0 * model.level,
+        fontSize: 60.0 / model.level,
+        fontFamily: commonFontFamily,
       ),
     );
   }

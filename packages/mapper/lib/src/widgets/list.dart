@@ -21,8 +21,10 @@ class CustomListView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             buildMarker(index),
+            const SizedBox(width: 5),
             Expanded(
               child: ParagraphBlock(items[index]).buildWidget(context),
             ),
