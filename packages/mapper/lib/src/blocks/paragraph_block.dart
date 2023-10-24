@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mapper/src/blocks/block.dart';
 import 'package:mapper/src/models/paragraph_block_model.dart';
 
-const String monospacedFontFamily = 'RobotoMono';
+const String _monospacedFontFamily = 'RobotoMono';
 
 class ParagraphBlock extends Block<ParagraphBlockModel> {
   ParagraphBlock(super.model);
@@ -24,7 +24,7 @@ class ParagraphBlock extends Block<ParagraphBlockModel> {
             text: child.text,
             style: TextStyle(
               fontFamily:
-                  child.style.isMonospaced ? monospacedFontFamily : null,
+                  child.style.isMonospaced ? _monospacedFontFamily : null,
               fontWeight:
                   child.style.isBold ? FontWeight.bold : FontWeight.normal,
               fontStyle:

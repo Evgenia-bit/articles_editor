@@ -11,10 +11,12 @@ class HeadingBlock extends Block<HeadingBlockModel> {
       model.text,
       textAlign: TextAlign.center,
       style: TextStyle(
-        color: const Color(0xFF000000),
+        // TODO(Evgenia-bit): import color from ColorScheme.
+        color: const Color(0xFF000000), 
         decoration: TextDecoration.none,
         fontWeight: FontWeight.bold,
-        fontSize: 20.0 * model.level,
+        // TODO(Evgenia-bit): import font from Theme.
+        fontSize: 20.0 * model.level, 
       ),
     );
   }
