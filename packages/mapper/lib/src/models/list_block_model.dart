@@ -3,24 +3,36 @@ import 'package:mapper/src/models/paragraph_block_model.dart';
 import 'package:mapper/src/utils/safe_cast.dart';
 
 abstract class ListBlockModel extends BlockModel {
-  abstract final bool isOrdered;
+  abstract final ListType listType;
   abstract final List<ParagraphBlockModel> items;
 }
 
-class CustomListBlockModel extends ListBlockModel {
-  @override
-  final bool isOrdered;
+enum ListType {
+  bulleted(),
+  ordered();
+}
 
+const listTypeMap = {
+  'BULLETED': ListType.bulleted,
+  'ORDERED': ListType.ordered,
+};
+
+class CustomListBlockModel extends ListBlockModel {
   @override
   late final List<ParagraphBlockModel> items;
 
+  @override
+  final ListType listType;
+
   CustomListBlockModel.fromJson(Map<String, dynamic>? json)
-      : isOrdered = safeCast<bool>(json?['is_ordered']) ?? false {
+      : listType = listTypeMap[json?['type']]! {
     items = _itemsFromJson(json?['items']);
   }
 
   List<ParagraphBlockModel> _itemsFromJson(items) {
-    final list = safeCast<List<Map<String, dynamic>>>(items);
+    // ignore: omit_local_variable_types
+    final List<Map<String, dynamic>>? list =
+        safeCast<List<dynamic>>(items)?.cast();
     if (list == null) return [];
     return list.map(CustomParagraphBlockModel.fromJson).toList();
   }

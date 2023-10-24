@@ -1,5 +1,8 @@
 {
     "id": 1,
+    "title": "Article title example",
+    "description": "Article description example",
+    "image_url": "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
     "blocks": [
         {
             "type": "paragraph",
@@ -34,7 +37,7 @@
         {
             "type": "list",
             "data": {
-                "is_ordered": true,
+                "type": "BULLETED",
                 "items": [
                     {
                         "children": [

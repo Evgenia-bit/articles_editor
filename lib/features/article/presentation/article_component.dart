@@ -1,5 +1,5 @@
-import 'package:mapper/mapper.dart';
+import 'package:artus/features/article/data/models/article.dart';
 
 abstract class ArticleComponent {
-  List<Block> get blocks;
+  Article? get article;
 }

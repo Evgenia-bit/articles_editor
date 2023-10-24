@@ -1,6 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:video_player/video_player.dart';
 
+
+
 class Video extends StatefulWidget {
   final Uri uri;
   const Video({required this.uri, super.key});
@@ -26,7 +28,17 @@ class VideoState extends State<Video> {
 
   @override
   Widget build(BuildContext context) {
-    if (!_controller.value.isInitialized) return const SizedBox.shrink();
+    if (_controller.value.hasError) {
+      return Image.asset(
+        _noVideoAssetName,
+        width: 250,
+      );
+    }
+
+    if (!_controller.value.isInitialized) {
+      return const SizedBox.shrink();
+    }
+
     return Padding(
       padding: const EdgeInsets.all(8),
       child: AspectRatio(

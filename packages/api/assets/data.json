@@ -1,0 +1,167 @@
+[
+    {
+        "id": 1,
+        "title": "Spring",
+        "description": "Article about spring",
+        "image_url": "https://cdn.britannica.com/05/155405-004-2466567A/Spring-flowers-fruit-trees-bloom.jpg",
+        "blocks": [
+
+            {
+                "type": "heading",
+                "data": {
+                    "text": "When is the Spring season?",
+                    "level": 3
+                }
+            },
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "Spring is the season succeeding Winter and preceding Summer. Spring refers to the season as well as to ideas of rebirth, rejuvenation, renewal, resurrection, and regrowth. During spring an important celebration takes place: Easter Day. It varies between March 22 and April 25 in Western tradition, and between April 4 and May 8 in Eastern Christianity.\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "heading",
+                "data": {
+                    "text": "What happens in spring?",
+                    "level": 3
+                }
+            },
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "Spring is the season succeeding Winter and preceding Summer. Spring refers to the season as well as to ideas of rebirth, rejuvenation, renewal, resurrection, and regrowth. During spring an important celebration takes place: Easter Day. It varies between March 22 and April 25 in Western tradition, and between April 4 and May 8 in Eastern Christianity.\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "heading",
+                "data": {
+                    "text": "What to do during the Spring Season?",
+                    "level": 3
+                }
+            },
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "There are so many things to do to enjoy spring:",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "list",
+                "data": {
+                    "type": "BULLETED",
+                    "items": [
+                        {
+                            "children": [
+                                {
+                                    "text": "Plan a holiday and make a trip. ",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                },
+                                {
+                                    "text": "Vacations",
+                                    "style": {
+                                        "is_bold": true,
+                                        "is_italic": true,
+                                        "is_monospaced": false
+                                    }
+                                },
+                                {
+                                    "text": " aren’t just for summer anymore!",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Take a ",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                },
+                                {
+                                    "text": "walk",
+                                    "style": {
+                                        "is_bold": true,
+                                        "is_italic": true,
+                                        "is_monospaced": false
+                                    }
+                                },
+                                {
+                                    "text": "in a field of flowers.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Meditate: ",
+                                    "style": {
+                                        "is_bold": true,
+                                        "is_italic": true,
+                                        "is_monospaced": false
+                                    }
+                                },
+                                {
+                                    "text": "Contemplate and reflect on the beauty of nature. Forget the worries of everyday life and empty the mind. Concentrate on the sounds and the scent of nature.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "video",
+                "data": {
+                    "url": "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4"
+                }
+            }
+        ]
+    }
+]

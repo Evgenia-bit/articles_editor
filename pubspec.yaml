@@ -16,11 +16,14 @@ dependencies:
   flutter:
     sdk: flutter
   go_router: ^12.0.0
+  golden_toolkit: ^0.15.0
   localizations:
     path: packages/localizations
   mapper:
     path: packages/mapper
   surf_lint_rules: ^3.0.0
+  ui_kit:
+    path: packages/ui_kit
 
 
 dev_dependencies:

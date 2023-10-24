@@ -25,7 +25,9 @@ class CustomParagraphBlockModel extends ParagraphBlockModel {
   }
 
   List<ParagraphItem> _childrenFromJson(children) {
-    final list = safeCast<List<Map<String, dynamic>>>(children);
+    // ignore: omit_local_variable_types
+    final List<Map<String, dynamic>>? list =
+        safeCast<List<dynamic>>(children)?.cast();
     if (list == null) return [];
     return list.map(CustomParagraphItem.fromJson).toList();
   }
@@ -33,15 +35,16 @@ class CustomParagraphBlockModel extends ParagraphBlockModel {
 
 class CustomParagraphItem extends ParagraphItem {
   @override
-  final String text;
+  late final String text;
   @override
   final ParagraphItemStyle style;
 
   CustomParagraphItem.fromJson(Map<String, dynamic> json)
-      : text = safeCast<String>(json['text']) ?? '',
-        style = CustomParagraphItemStyle.fromJson(
-          safeCast<Map<String, bool>>(json['style']),
-        );
+      : style = CustomParagraphItemStyle.fromJson(
+          safeCast<Map<String, dynamic>>(json['style']),
+        ) {
+    text = json['text'] as String;
+  }
 }
 
 class CustomParagraphItemStyle extends ParagraphItemStyle {
@@ -52,7 +55,7 @@ class CustomParagraphItemStyle extends ParagraphItemStyle {
   @override
   final bool isMonospaced;
 
-  CustomParagraphItemStyle.fromJson(Map<String, bool>? json)
+  CustomParagraphItemStyle.fromJson(Map<String, dynamic>? json)
       : isBold = safeCast<bool>(json?['is_bold']) ?? false,
         isItalic = safeCast<bool>(json?['is_italic']) ?? false,
         isMonospaced = safeCast<bool>(json?['is_monospaced']) ?? false;
