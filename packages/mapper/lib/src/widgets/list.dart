@@ -23,7 +23,7 @@ class CustomListView extends StatelessWidget {
         return Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            buildMarker(index),
+            buildMarker(index, context),
             const SizedBox(width: 5),
             Expanded(
               child: ParagraphBlock(items[index]).buildWidget(context),
