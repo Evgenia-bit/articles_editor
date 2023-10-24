@@ -28,9 +28,8 @@ class ParagraphBlock extends Block<ParagraphBlockModel> {
           (child) => TextSpan(
             text: child.text,
             style: TextStyle(
-              fontFamily: child.style.isMonospaced
-                  ? monospacedFontFamily
-                  : commonFontFamily,
+              fontFamily:
+                  child.style.isMonospaced ? monospacedFontFamily : null,
               fontWeight:
                   child.style.isBold ? FontWeight.bold : FontWeight.normal,
               fontStyle:

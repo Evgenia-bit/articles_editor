@@ -3,7 +3,7 @@ import 'package:mapper/src/blocks/paragraph_block.dart';
 import 'package:mapper/src/models/paragraph_block_model.dart';
 
 class CustomListView extends StatelessWidget {
-  final Widget Function(int) buildMarker;
+  final Widget Function(int, BuildContext) buildMarker;
   final List<ParagraphBlockModel> items;
 
   const CustomListView({
