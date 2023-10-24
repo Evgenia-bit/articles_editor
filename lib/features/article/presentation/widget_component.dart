@@ -45,7 +45,6 @@ class _ArticleWidgetComponentState
     setState(() {
       article = Article(
         title: articleDto.title,
-        imageURL: articleDto.imageURL,
         blocks: widget.mapper.getBlocksFromJson(articleDto.blocks),
       );
     });

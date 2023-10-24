@@ -1,6 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:video_player/video_player.dart';
 
+
+
 class Video extends StatefulWidget {
   final Uri uri;
   const Video({required this.uri, super.key});
@@ -28,7 +30,7 @@ class VideoState extends State<Video> {
   Widget build(BuildContext context) {
     if (_controller.value.hasError) {
       return Image.asset(
-        'packages/mapper/assets/no_video.png',
+        _noVideoAssetName,
         width: 250,
       );
     }

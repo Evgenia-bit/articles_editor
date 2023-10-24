@@ -1,6 +1,7 @@
 import 'package:artus/features/article/presentation/article_component.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:ui_kit/ui_kit.dart';
 
 class ArticleView extends WidgetView<ArticleComponent> {
   const ArticleView(super.component, {super.key});
@@ -18,7 +19,10 @@ class ArticleView extends WidgetView<ArticleComponent> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            //CustomAppBar
+            CustomAppBar(
+              title: article.title,
+              automaticallyImplyLeading: true,
+            ),
             ...article.blocks.map(
               (block) => block.buildWidget(context),
             ),

@@ -6,7 +6,7 @@ void main() {
     final builder = GoldenBuilder.column()
       ..addScenario(
         'AppBar',
-        const AppBar(
+        const CustomAppBar(
           title: 'Test',
         ),
       );
@@ -18,7 +18,7 @@ void main() {
     final builder = GoldenBuilder.column()
       ..addScenario(
         'AppBar',
-        const AppBar(
+        const CustomAppBar(
           title: 'Test',
           automaticallyImplyLeading: true,
         ),

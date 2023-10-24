@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class AppBar extends StatelessWidget {
+class CustomAppBar extends StatelessWidget {
   final String title;
   final bool automaticallyImplyLeading;
 
-  const AppBar({
+  const CustomAppBar({
     required this.title,
     this.automaticallyImplyLeading = false,
     super.key,
@@ -45,12 +45,9 @@ class _BackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20),
-      child: GestureDetector(
-        onTap: () => Navigator.of(context).pop(),
-        child: const Icon(Icons.arrow_back_ios),
-      ),
+    return GestureDetector(
+      onTap: () => Navigator.of(context).pop(),
+      child: const Icon(Icons.arrow_back_ios),
     );
   }
 }
