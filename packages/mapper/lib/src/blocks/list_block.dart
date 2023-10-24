@@ -14,7 +14,7 @@ class BulletedListBlock extends ListBlock {
   Widget buildWidget(BuildContext context) {
     return CustomListView(
       items: model.items,
-      buildMarker: (_) => const Icon(
+      buildMarker: (_, context) => const Icon(
         Icons.circle,
         size: 5,
       ),
@@ -29,7 +29,7 @@ class OrderedListBlock extends ListBlock {
   Widget buildWidget(BuildContext context) {
     return CustomListView(
       items: model.items,
-      buildMarker: (index) => Text('${index + 1}'),
+      buildMarker: (index, context) => Text('${index + 1}'),
     );
   }
 }

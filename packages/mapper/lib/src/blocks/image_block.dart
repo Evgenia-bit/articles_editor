@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:mapper/src/blocks/block.dart';
 import 'package:mapper/src/models/image_block_model.dart';
 
+const _noImageAssetName = 'packages/mapper/assets/no_image.png';
+
 class ImageBlock extends Block<ImageBlockModel> {
   ImageBlock(super.model);
 
@@ -15,7 +17,7 @@ class ImageBlock extends Block<ImageBlockModel> {
         fit: BoxFit.contain,
         errorBuilder: (context, error, stackTrace) {
           return Image.asset(
-            'packages/mapper/assets/no_image.png',
+            _noImageAssetName,
             width: 150,
             fit: BoxFit.contain,
           );
