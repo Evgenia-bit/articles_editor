@@ -1,16 +1,27 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:api/src/api/articles/data/article_dto.dart';
 import 'package:api/src/utils/safe_cast.dart';
 import 'package:flutter/services.dart';
 
 class ArticlesApi {
-  Future<List<ArticleDto>> getAllArticles() async {
+  /// Returns a list of articles and the total number of articles.
+  Future<(List<ArticleDto>, int)> getAllArticles({
+    int page = 0,
+    int limit = 5,
+  }) async {
     final articles = await _getData();
-    if (articles == null) return [];
+    if (articles == null) return (<ArticleDto>[], 0);
     try {
-      return articles.map(ArticleDto.fromJSON).toList();
+      final start = page * limit;
+      final end = start + limit;
+      final result = articles
+          .sublist(start, min(end, articles.length))
+          .map(ArticleDto.fromJSON)
+          .toList();
+      return (result, articles.length);
     } catch (_) {
-      return [];
+      return (<ArticleDto>[], 0);
     }
   }
 

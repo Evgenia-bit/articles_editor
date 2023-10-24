@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:video_player/video_player.dart';
 
-
+const _noVideoAssetName = 'packages/mapper/assets/no_video.png';
 
 class Video extends StatefulWidget {
   final Uri uri;

@@ -1,3 +1,4 @@
+import 'package:api/api.dart';
 import 'package:artus/features/article/data/article_repository.dart';
 import 'package:artus/features/article/presentation/widget_component.dart';
 import 'package:artus/features/article_list/data/article_list_repository.dart';
@@ -27,7 +28,7 @@ final router = GoRouter(
               if (id == null) {
                 return const SizedBox.shrink();
               }
-              final repository = ArticleRepository(articleId: id);
+              final repository = ArticleRepository(articleId: id, api: ArticlesApi());
               return ArticleWidgetComponent(
                 getArticleBlocksUseCase: repository,
               );
