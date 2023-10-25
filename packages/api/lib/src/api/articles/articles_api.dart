@@ -12,20 +12,22 @@ class ArticlesApiStub implements ArticlesApi {
   @override
   Future<List<ArticleDto>> getAll() async {
     final articles = await _getData();
-    if (articles == null) return [];
     return articles.map(ArticleDto.fromJson).toList();
   }
 
   @override
   Future<ArticleDto?> getById(int id) async {
     final articleList = await _getData();
-    final article = articleList?.firstWhere((a) => a['id'] == id);
-    return ArticleDto.fromJson(article!);
+    final article = articleList.firstWhere((a) => a['id'] == id);
+    return ArticleDto.fromJson(article);
   }
 
-  Future<List<Map<String, dynamic>>?> _getData() async {
+  Future<List<Map<String, dynamic>>> _getData() async {
     final result = await rootBundle.loadString('packages/api/assets/data.json');
     final json = jsonDecode(result);
-    return safeCast<List<dynamic>>(json)?.cast();
+    final articles =
+        safeCast<List<dynamic>>(json)?.cast<Map<String, dynamic>>();
+    if (articles == null) throw Exception('Incorrect data format: $json');
+    return articles;
   }
 }
