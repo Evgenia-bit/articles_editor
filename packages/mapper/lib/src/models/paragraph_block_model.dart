@@ -26,7 +26,9 @@ class CustomParagraphBlockModel extends ParagraphBlockModel {
 
   List<ParagraphItem> _childrenFromJson(children) {
     final list = safeCast<List<Map<String, dynamic>>>(children);
-    if (list == null) return [];
+    if (list == null) {
+      throw Exception('Incorrect data format: $children');
+    }
     return list.map(CustomParagraphItem.fromJson).toList();
   }
 }

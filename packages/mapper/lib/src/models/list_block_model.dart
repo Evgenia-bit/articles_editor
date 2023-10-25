@@ -31,7 +31,9 @@ class CustomListBlockModel extends ListBlockModel {
 
   List<ParagraphBlockModel> _itemsFromJson(items) {
     final list = safeCast<List<Map<String, dynamic>>>(items);
-    if (list == null) return [];
+    if (list == null) {
+      throw Exception('Incorrect data format: $items');
+    }
     return list.map(CustomParagraphBlockModel.fromJson).toList();
   }
 }
