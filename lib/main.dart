@@ -13,7 +13,11 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    final repository = ArticleRepository(articleId: 1, api: ArticlesApiStub());
+    final repository = ArticleRepository(
+      articleId: 1,
+      api: ArticlesApiStub(),
+      mapper: Mapper(blockParser: BlockParser()),
+    );
 
     return MaterialApp(
       localizationsDelegates: const [
@@ -31,7 +35,6 @@ class MyApp extends StatelessWidget {
       home: ArticleWidgetComponent(
         getArticleIdUseCase: repository,
         loadArticleUseCase: repository,
-        mapper: Mapper(blockParser: BlockParser()),
       ),
     );
   }
