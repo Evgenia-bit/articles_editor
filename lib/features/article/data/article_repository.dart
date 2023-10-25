@@ -14,6 +14,6 @@ class ArticleRepository implements GetArticleIdUseCase, LoadArticleUseCase {
 
   @override
   Future<ArticleDto?> loadArticle() async {
-    return _api.getArticleById(articleId);
+    return _api.getById(articleId);
   }
 }

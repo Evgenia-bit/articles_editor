@@ -27,23 +27,16 @@ class ArticlesApi {
 
   Future<ArticleDto?> getArticleById(int id) async {
     final articleList = await _getData();
-
-    try {
-      final article = articleList?.firstWhere((a) => a['id'] == id);
-      return ArticleDto.fromJSON(article!);
-    } catch (e) {
-      return null;
-    }
+    final article = articleList.firstWhere((a) => a['id'] == id);
+    return ArticleDto.fromJson(article);
   }
 
-  Future<List<Map<String, dynamic>>?> _getData() async {
-    try {
-      final result =
-          await rootBundle.loadString('packages/api/assets/data.json');
-      final json = jsonDecode(result);
-      return safeCast<List<dynamic>>(json)?.cast();
-    } catch (_) {
-      return null;
-    }
+  Future<List<Map<String, dynamic>>> _getData() async {
+    final result = await rootBundle.loadString('packages/api/assets/data.json');
+    final json = jsonDecode(result);
+    final articles =
+        safeCast<List<dynamic>>(json)?.cast<Map<String, dynamic>>();
+    if (articles == null) throw Exception('Incorrect data format: $json');
+    return articles;
   }
 }
