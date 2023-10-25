@@ -8,16 +8,12 @@ import 'package:flutter/widgets.dart';
 class ArticleListWidgetComponent extends StatefulWidget {
   const ArticleListWidgetComponent({
     required this.incrementCurrentPageUseCase,
-    required this.getCurrentPageUseCase,
-    required this.getScrollControllerUseCase,
     required this.loadArticlesUseCase,
     required this.getArticlesCountUseCase,
     super.key,
   });
 
   final IncrementCurrentPageUseCase incrementCurrentPageUseCase;
-  final GetCurrentPageUseCase getCurrentPageUseCase;
-  final GetScrollControllerUseCase getScrollControllerUseCase;
   final LoadArticlesUseCase loadArticlesUseCase;
   final GetArticlesCountUseCase getArticlesCountUseCase;
 
@@ -37,7 +33,7 @@ class _ArticleListWidgetComponentState
   void initState() {
     super.initState();
     _updateArticles();
-    scrollController = widget.getScrollControllerUseCase.scrollController;
+    scrollController = ScrollController();
     scrollController.addListener(_loadPage);
   }
 
@@ -55,9 +51,7 @@ class _ArticleListWidgetComponentState
   }
 
   Future<void> _updateArticles() async {
-    final newArticles = await widget.loadArticlesUseCase.loadArticles(
-      page: widget.getCurrentPageUseCase.currentPage,
-    );
+    final newArticles = await widget.loadArticlesUseCase.loadArticles();
     setState(() {
       articles.addAll(newArticles);
     });

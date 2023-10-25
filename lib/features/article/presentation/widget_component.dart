@@ -31,7 +31,7 @@ class _ArticleWidgetComponentState
   void initState() {
     super.initState();
     widget.loadArticleUseCase.loadArticle().then((result) {
-      setState(() async {
+      setState(() {
         article = result;
       });
     });

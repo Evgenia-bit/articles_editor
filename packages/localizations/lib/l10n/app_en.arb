@@ -1,5 +1,6 @@
 {
   "increment": "Increment",
   "decrement": "Decrement",
-  "text": "You have pushed the button this many times:"
+  "text": "You have pushed the button this many times:",
+  "readButtonText": "Read"
 }

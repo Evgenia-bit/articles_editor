@@ -3,6 +3,7 @@ import 'package:artus/features/article_list/presentation/article_list_component.
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:localizations/localizations.dart';
 
 class ArticleListView extends WidgetView<ArticleListComponent> {
   const ArticleListView(super.component, {super.key});
@@ -15,6 +16,7 @@ class ArticleListView extends WidgetView<ArticleListComponent> {
         child: ListView.separated(
           controller: component.scrollController,
           padding: const EdgeInsets.all(16),
+          shrinkWrap: true,
           itemCount: component.articles.length,
           itemBuilder: (context, index) => _ArticleListItem(
             article: component.articles[index],
@@ -84,19 +86,19 @@ class _ArticleListItem extends StatelessWidget {
                   ],
                   GestureDetector(
                     onTap: () => context.go('/article/${article.id}'),
-                    child: const ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                       child: SizedBox(
                         height: 40,
                         width: double.infinity,
                         child: ColoredBox(
-                          color: Color(0xffe9f2fb),
+                          color: const Color(0xffe9f2fb),
                           child: Padding(
-                            padding: EdgeInsets.all(8),
+                            padding: const EdgeInsets.all(8),
                             child: Text(
-                              'Перейти',
+                              AppLocalizations.of(context)!.readButtonText,
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Color(0xff0060d0),
                                 fontSize: 16,
                                 decoration: TextDecoration.none,

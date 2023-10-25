@@ -113,6 +113,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'You have pushed the button this many times:'**
   String get text;
+
+  /// No description provided for @readButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Read'**
+  String get readButtonText;
 }
 
 class _AppLocalizationsDelegate

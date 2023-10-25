@@ -12,4 +12,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get text => 'Вы нажимали на кнопку столько раз:';
+
+  @override
+  String get readButtonText => 'Читать';
 }

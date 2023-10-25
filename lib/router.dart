@@ -18,8 +18,6 @@ final router = GoRouter(
         );
         return ArticleListWidgetComponent(
           incrementCurrentPageUseCase: repository,
-          getCurrentPageUseCase: repository,
-          getScrollControllerUseCase: repository,
           loadArticlesUseCase: repository,
           getArticlesCountUseCase: repository,
         );
@@ -35,13 +33,12 @@ final router = GoRouter(
             final repository = ArticleRepository(
               articleId: id,
               api: ArticlesApiStub(),
+              mapper: Mapper(blockParser: BlockParser()),
             );
-            final mapper = Mapper(blockParser: BlockParser());
 
             return ArticleWidgetComponent(
               loadArticleUseCase: repository,
               getArticleIdUseCase: repository,
-              mapper: mapper,
             );
           },
         ),

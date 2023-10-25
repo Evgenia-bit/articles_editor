@@ -1,13 +1,11 @@
 import 'package:api/api.dart';
 import 'package:artus/features/article_list/data/models/article_list_item.dart';
 import 'package:artus/features/article_list/domain/use_case.dart';
-import 'package:flutter/widgets.dart';
 
 class ArticleListRepository
     implements
         GetCurrentPageUseCase,
         IncrementCurrentPageUseCase,
-        GetScrollControllerUseCase,
         LoadArticlesUseCase,
         GetArticlesCountUseCase {
   ArticleListRepository({
@@ -24,9 +22,6 @@ class ArticleListRepository
   int increment() => currentPage++;
 
   @override
-  ScrollController scrollController = ScrollController();
-
-  @override
   int articlesCount = 0;
 
   @override
@@ -34,15 +29,18 @@ class ArticleListRepository
     int page = 0,
     int limit = 5,
   }) async {
-    final (articles, count) = await _api.getAll(page: page, limit: limit);
+    final (articles, count) =
+        await _api.getAll(page: currentPage, limit: limit,);
     articlesCount = count;
-    return articles.map(
-      (a) => ArticleListItem(
-        id: a.id,
-        title: a.title,
-        description: a.description,
-        imageUrl: a.imageUrl,
-      ),
-    ).toList();
+    return articles
+        .map(
+          (a) => ArticleListItem(
+            id: a.id,
+            title: a.title,
+            description: a.description,
+            imageUrl: a.imageUrl,
+          ),
+        )
+        .toList();
   }
 }
