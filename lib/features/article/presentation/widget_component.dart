@@ -44,7 +44,7 @@ class _ArticleWidgetComponentState
     if (articleDto == null) return;
     setState(() {
       article = Article(
-        title: articleDto.title,
+        title: articleDto.title ?? '',
         blocks: widget.mapper.getBlocksFromJson(articleDto.blocks),
       );
     });

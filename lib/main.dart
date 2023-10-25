@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    final repository = ArticleRepository(articleId: 1, api: ArticlesApi());
+    final repository = ArticleRepository(articleId: 1, api: ArticlesApiStub());
 
     return MaterialApp(
       localizationsDelegates: const [
