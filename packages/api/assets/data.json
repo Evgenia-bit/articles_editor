@@ -445,7 +445,6 @@
         "id": 9,
         "title": "Seven ways to protect the environment",
         "description": "Article about seven ways to protect the environment",
-        "image_url": "",
         "blocks": [
             {
                 "type": "paragraph",
@@ -807,7 +806,6 @@
         "id": 12,
         "title": "Stereotype",
         "description": "Article about stereotype",
-        "image_url": "",
         "blocks": [
             {
                 "type": "paragraph",

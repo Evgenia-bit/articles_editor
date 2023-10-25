@@ -1,7 +1,7 @@
-import 'package:artus/common/data/models/article.dart';
+import 'package:artus/features/article_list/data/models/article_list_item.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class ArticleListComponent {
-  List<Article> get articles;
+  List<ArticleListItem> get articles;
   ScrollController get scrollController;
 }

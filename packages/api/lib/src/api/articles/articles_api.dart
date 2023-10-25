@@ -4,28 +4,30 @@ import 'package:api/src/api/articles/data/article_dto.dart';
 import 'package:api/src/utils/safe_cast.dart';
 import 'package:flutter/services.dart';
 
-class ArticlesApi {
-  /// Returns a list of articles and the total number of articles.
-  Future<(List<ArticleDto>, int)> getAllArticles({
+abstract interface class ArticlesApi {
+  /// Returns a Record with a list of articles and the total count of articles.
+  Future<(List<ArticleDto>, int)> getAll({int page, int limit});
+  Future<ArticleDto?> getById(int id);
+}
+
+class ArticlesApiStub implements ArticlesApi {
+  @override
+  Future<(List<ArticleDto>, int)> getAll({
     int page = 0,
     int limit = 5,
   }) async {
-    final articles = await _getData();
-    if (articles == null) return (<ArticleDto>[], 0);
-    try {
-      final start = page * limit;
-      final end = start + limit;
-      final result = articles
-          .sublist(start, min(end, articles.length))
-          .map(ArticleDto.fromJSON)
-          .toList();
-      return (result, articles.length);
-    } catch (_) {
-      return (<ArticleDto>[], 0);
-    }
+    final allArticles = await _getData();
+    final start = page * limit;
+    final end = start + limit;
+    final limitedArticles = allArticles
+        .sublist(start, min(end, allArticles.length))
+        .map(ArticleDto.fromJson)
+        .toList();
+    return (limitedArticles, allArticles.length);
   }
 
-  Future<ArticleDto?> getArticleById(int id) async {
+  @override
+  Future<ArticleDto?> getById(int id) async {
     final articleList = await _getData();
     final article = articleList.firstWhere((a) => a['id'] == id);
     return ArticleDto.fromJson(article);

@@ -1,4 +1,4 @@
-import 'package:artus/common/data/models/article.dart';
+import 'package:artus/features/article_list/data/models/article_list_item.dart';
 import 'package:artus/features/article_list/domain/use_case.dart';
 import 'package:artus/features/article_list/presentation/article_list_component.dart';
 import 'package:artus/features/article_list/presentation/view.dart';
@@ -36,27 +36,31 @@ class _ArticleListWidgetComponentState
   @override
   void initState() {
     super.initState();
-    articles = widget.loadArticlesUseCase.loadArticles();
+    _updateArticles();
     scrollController = widget.getScrollControllerUseCase.scrollController;
-    scrollController.addListener(_loadArticles);
+    scrollController.addListener(_loadPage);
   }
 
   @override
-  late final List<Article> articles;
+  List<ArticleListItem> articles = [];
 
   @override
   late final ScrollController scrollController;
 
-  void _loadArticles() {
+  Future<void> _loadPage() async {
     if (_isMaxScroll && !_isMaxArticlesCount) {
       widget.incrementCurrentPageUseCase.increment();
-      final newArticles = widget.loadArticlesUseCase.loadArticles(
-        page: widget.getCurrentPageUseCase.currentPage,
-      );
-      setState(() {
-        articles.addAll(newArticles);
-      });
+      await _updateArticles();
     }
+  }
+
+  Future<void> _updateArticles() async {
+    final newArticles = await widget.loadArticlesUseCase.loadArticles(
+      page: widget.getCurrentPageUseCase.currentPage,
+    );
+    setState(() {
+      articles.addAll(newArticles);
+    });
   }
 
   bool get _isMaxScroll =>
@@ -64,5 +68,5 @@ class _ArticleListWidgetComponentState
       scrollController.position.maxScrollExtent;
 
   bool get _isMaxArticlesCount =>
-      widget.getArticlesCountUseCase.getCount == articles.length;
+      widget.getArticlesCountUseCase.articlesCount == articles.length;
 }

@@ -1,4 +1,4 @@
-import 'package:artus/common/data/models/article.dart';
+import 'package:artus/features/article_list/data/models/article_list_item.dart';
 import 'package:artus/features/article_list/presentation/article_list_component.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +29,7 @@ class ArticleListView extends WidgetView<ArticleListComponent> {
 }
 
 class _ArticleListItem extends StatelessWidget {
-  final Article article;
+  final ArticleListItem article;
   const _ArticleListItem({required this.article});
 
   @override
@@ -44,12 +44,12 @@ class _ArticleListItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (article.imageURL != null)
+            if (article.imageUrl != null)
               SizedBox(
                 height: 150,
                 width: double.infinity,
                 child: Image.network(
-                  article.imageURL!,
+                  article.imageUrl!,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -58,24 +58,28 @@ class _ArticleListItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    article.title,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontSize: 20,
+                  if (article.title != null) ...[
+                    Text(
+                      article.title!,
+                      style: const TextStyle(
+                        color: Colors.black,
+                        decoration: TextDecoration.none,
+                        fontSize: 20,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    article.description,
-                    style: const TextStyle(
-                      color: Colors.grey,
-                      decoration: TextDecoration.none,
-                      fontSize: 14,
+                    const SizedBox(height: 10),
+                  ],
+                  if (article.description != null) ...[
+                    Text(
+                      article.description!,
+                      style: const TextStyle(
+                        color: Colors.grey,
+                        decoration: TextDecoration.none,
+                        fontSize: 14,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 10),
+                    const SizedBox(height: 10),
+                  ],
                   GestureDetector(
                     onTap: () => context.go('/article/${article.id}'),
                     child: const ClipRRect(

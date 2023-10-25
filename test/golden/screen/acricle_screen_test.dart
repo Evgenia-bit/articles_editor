@@ -8,7 +8,7 @@ void main() {
   testGoldens('Article screen', (tester) async {
     final repository = ArticleRepository(
       articleId: 1,
-      api: ArticlesApi(),
+      api: ArticlesApiStub(),
     );
     final widget = ArticleWidgetComponent(
       getArticleIdUseCase: repository,

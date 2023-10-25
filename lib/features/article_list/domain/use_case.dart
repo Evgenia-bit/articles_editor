@@ -1,9 +1,5 @@
-import 'package:artus/common/data/models/article.dart';
+import 'package:artus/features/article_list/data/models/article_list_item.dart';
 import 'package:flutter/widgets.dart';
-
-abstract interface class GetArticleListUseCase {
-  List<Article> get articles;
-}
 
 abstract interface class IncrementCurrentPageUseCase {
   int increment();
@@ -18,9 +14,9 @@ abstract interface class GetScrollControllerUseCase {
 }
 
 abstract interface class LoadArticlesUseCase {
-  List<Article> loadArticles({int page, int limit});
+  Future<List<ArticleListItem>> loadArticles({int page, int limit});
 }
 
 abstract interface class GetArticlesCountUseCase {
-  int get getCount;
+  int get articlesCount;
 }

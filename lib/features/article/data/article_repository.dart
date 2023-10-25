@@ -4,10 +4,10 @@ import 'package:artus/features/article/domain/use_case.dart';
 class ArticleRepository implements GetArticleIdUseCase, LoadArticleUseCase {
   ArticleRepository({
     required this.articleId,
-    required ArticlesApi api,
+    required ArticlesApiStub api,
   }) : _api = api;
 
-  final ArticlesApi _api;
+  final ArticlesApiStub _api;
 
   @override
   int articleId;
