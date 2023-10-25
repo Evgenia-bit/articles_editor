@@ -70,7 +70,7 @@ class _AppBarTitle extends StatelessWidget {
       title,
       textAlign: TextAlign.center,
       overflow: TextOverflow.ellipsis,
-      style: AppTextTheme.of(context).bold24.copyWith(
+      style: AppTextTheme.of(context).titleLarge.copyWith(
             color: AppColorScheme.of(context).onBackground,
           ),
     );

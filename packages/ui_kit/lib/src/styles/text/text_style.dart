@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 /// App text style.
 enum AppTextStyle {
-  regular14(TextStyle(fontSize: 14)),
-  regular16(TextStyle(fontSize: 16)),
+  titleLarge(TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+  titleSmall(TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
 
-  bold16(TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
-  bold18(TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
-  bold24(TextStyle(fontSize: 24, fontWeight: FontWeight.w700)),
-  bold30(TextStyle(fontSize: 30, fontWeight: FontWeight.w700));
+  headlineLarge(TextStyle(fontSize: 26, fontWeight: FontWeight.w700)),
+  headlineMedium(TextStyle(fontSize: 22, fontWeight: FontWeight.w700)),
+  headlineSmall(TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
+
+  body(TextStyle(fontSize: 14, fontWeight: FontWeight.w400)),
+  label(TextStyle(fontSize: 16, fontWeight: FontWeight.w600));
 
   final TextStyle value;
 
