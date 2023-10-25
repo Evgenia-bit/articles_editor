@@ -51,6 +51,8 @@ class _ArticleListItem extends StatelessWidget {
                 child: Image.network(
                   article.imageUrl!,
                   fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) =>
+                      const SizedBox.shrink(),
                 ),
               ),
             Padding(
