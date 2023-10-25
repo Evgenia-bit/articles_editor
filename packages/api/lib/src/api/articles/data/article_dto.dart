@@ -2,9 +2,6 @@ import 'package:api/src/utils/safe_cast.dart';
 
 class ArticleDto {
   final int id;
-  final String title;
-  final String description;
-  final String? imageURL;
   final String? title;
   final String? description;
   final String? imageUrl;
