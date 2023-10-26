@@ -30,9 +30,7 @@ class CustomListBlockModel extends ListBlockModel {
   }
 
   List<ParagraphBlockModel> _itemsFromJson(items) {
-    // ignore: omit_local_variable_types
-    final List<Map<String, dynamic>>? list =
-        safeCast<List<dynamic>>(items)?.cast();
+    final list = safeCast<List<dynamic>>(items)?.cast<Map<String, dynamic>>();
     if (list == null) return [];
     return list.map(CustomParagraphBlockModel.fromJson).toList();
   }
