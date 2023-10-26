@@ -16,6 +16,7 @@ dependencies:
   video_player: ^2.7.2
 
 flutter:
+  uses-material-design: true
   assets:
     - assets/no_image.png
     - assets/no_video.png
@@ -30,3 +31,5 @@ flutter:
         - asset: fonts/RobotoMono-BoldItalic.ttf
           weight: 700
           style: italic
+dev_dependencies:
+  test: ^1.24.3
