@@ -1,7 +1,6 @@
 import 'package:artus/router.dart';
 import 'package:flutter/material.dart';
 import 'package:localizations/localizations.dart';
-import 'package:mapper/mapper.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 void main() {

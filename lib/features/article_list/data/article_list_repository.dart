@@ -29,8 +29,10 @@ class ArticleListRepository
     int page = 0,
     int limit = 5,
   }) async {
-    final (articles, count) =
-        await _api.getAll(page: currentPage, limit: limit,);
+    final (articles, count) = await _api.getAll(
+      page: currentPage,
+      limit: limit,
+    );
     articlesCount = count;
     return articles
         .map(
