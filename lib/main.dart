@@ -4,6 +4,7 @@ import 'package:artus/features/article/presentation/widget_component.dart';
 import 'package:flutter/material.dart';
 import 'package:localizations/localizations.dart';
 import 'package:mapper/mapper.dart';
+import 'package:ui_kit/ui_kit.dart';
 
 void main() {
   runApp(const MyApp());

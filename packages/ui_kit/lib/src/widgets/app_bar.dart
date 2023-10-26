@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:ui_kit/src/styles/colors/color_scheme.dart';
+import 'package:ui_kit/src/styles/text/text_extention.dart';
 
+class CustomAppBar extends StatelessWidget {
 class CustomAppBar extends StatelessWidget {
   final String title;
   final bool automaticallyImplyLeading;
 
+  const CustomAppBar({
   const CustomAppBar({
     required this.title,
     this.automaticallyImplyLeading = false,
@@ -15,7 +19,7 @@ class CustomAppBar extends StatelessWidget {
     return SizedBox(
       height: 70,
       child: ColoredBox(
-        color: Colors.white,
+        color: AppColorScheme.of(context).background,
         child: automaticallyImplyLeading
             ? Row(
                 children: [
@@ -62,12 +66,9 @@ class _AppBarTitle extends StatelessWidget {
       title,
       textAlign: TextAlign.center,
       overflow: TextOverflow.ellipsis,
-      style: const TextStyle(
-        color: Color(0xFF000000),
-        decoration: TextDecoration.none,
-        fontWeight: FontWeight.bold,
-        fontSize: 24,
-      ),
+      style: AppTextTheme.of(context).titleLarge.copyWith(
+            color: AppColorScheme.of(context).onBackground,
+          ),
     );
   }
 }
