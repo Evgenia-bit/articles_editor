@@ -25,9 +25,8 @@ class CustomParagraphBlockModel extends ParagraphBlockModel {
   }
 
   List<ParagraphItem> _childrenFromJson(children) {
-    // ignore: omit_local_variable_types
-    final List<Map<String, dynamic>>? list =
-        safeCast<List<dynamic>>(children)?.cast();
+    final list =
+        safeCast<List<dynamic>>(children)?.cast<Map<String, dynamic>>();
     if (list == null) return [];
     return list.map(CustomParagraphItem.fromJson).toList();
   }

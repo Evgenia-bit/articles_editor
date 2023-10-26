@@ -11,6 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   surf_lint_rules: ^3.0.0
+  ui_kit:
+    path: ../ui_kit
   video_player: ^2.7.2
 
 flutter:

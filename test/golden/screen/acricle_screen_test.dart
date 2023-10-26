@@ -1,10 +1,12 @@
 import 'package:artus/features/article/data/models/article.dart';
 import 'package:artus/features/article/presentation/article_component.dart';
 import 'package:artus/features/article/presentation/view.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:mapper/mapper.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:ui_kit/ui_kit.dart';
 
 void main() {
   final component = ArticleComponentMock();
@@ -14,8 +16,16 @@ void main() {
     when(() => component.article).thenReturn(_articleMock);
   });
 
-  testGoldens('Article screen', (tester) async {
-    final builder = DeviceBuilder()
+  Future<void> buildArticleScreenWithTheme(
+    ThemeData theme,
+    WidgetTester tester,
+  ) async {
+    final builder = DeviceBuilder(
+      wrap: (widget) => Theme(
+        data: theme,
+        child: widget,
+      ),
+    )
       ..overrideDevicesForAllScenarios(devices: [
         Device.phone,
         Device.iphone11,
@@ -28,8 +38,16 @@ void main() {
       );
 
     await tester.pumpDeviceBuilder(builder);
+  }
 
-    await screenMatchesGolden(tester, 'article_screen');
+  testGoldens('Article screen light', (tester) async {
+    await buildArticleScreenWithTheme(AppThemeData.lightTheme, tester);
+    await screenMatchesGolden(tester, 'light/article_screen');
+  });
+
+  testGoldens('Article screen dark', (tester) async {
+    await buildArticleScreenWithTheme(AppThemeData.darkTheme, tester);
+    await screenMatchesGolden(tester, 'dark/article_screen');
   });
 }
 
