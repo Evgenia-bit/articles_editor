@@ -21,17 +21,11 @@ class CustomAppBar extends StatelessWidget {
         child: automaticallyImplyLeading
             ? Row(
                 children: [
-                  if (automaticallyImplyLeading)
-                    const Expanded(
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: _BackButton(),
-                      ),
-                    ),
+                  const _BackButton(),
                   Expanded(
                     child: _AppBarTitle(title: title),
                   ),
-                  const Spacer(),
+                  const SizedBox(width: 20)
                 ],
               )
             : Center(
@@ -65,7 +59,7 @@ class _AppBarTitle extends StatelessWidget {
       title,
       textAlign: TextAlign.center,
       overflow: TextOverflow.ellipsis,
-      style: AppTextTheme.of(context).headlineMedium.copyWith(
+      style: AppTextTheme.of(context).headlineSmall.copyWith(
             color: AppColorScheme.of(context).onBackground,
           ),
     );
