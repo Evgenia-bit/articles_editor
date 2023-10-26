@@ -2,15 +2,32 @@ import 'package:flutter/material.dart';
 
 /// App text style.
 enum AppTextStyle {
-  titleLarge(TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-  titleSmall(TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+  headlineLarge(TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.w700,
+    decoration: TextDecoration.none,
+  )),
+  headlineMedium(TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w700,
+    decoration: TextDecoration.none,
+  )),
+  headlineSmall(TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+    decoration: TextDecoration.none,
+  )),
 
-  headlineLarge(TextStyle(fontSize: 26, fontWeight: FontWeight.w700)),
-  headlineMedium(TextStyle(fontSize: 22, fontWeight: FontWeight.w700)),
-  headlineSmall(TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
-
-  body(TextStyle(fontSize: 14, fontWeight: FontWeight.w400)),
-  label(TextStyle(fontSize: 16, fontWeight: FontWeight.w600));
+  body(TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    decoration: TextDecoration.none,
+  )),
+  label(TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    decoration: TextDecoration.none,
+  ));
 
   final TextStyle value;
 

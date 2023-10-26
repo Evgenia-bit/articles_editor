@@ -3,12 +3,6 @@ import 'package:ui_kit/src/styles/text/text_style.dart';
 
 /// App text style scheme.
 class AppTextTheme extends ThemeExtension<AppTextTheme> {
-  /// Text style 18_500.
-  final TextStyle titleLarge;
-
-  /// Text style 16_500.
-  final TextStyle titleSmall;
-
   /// Text style 26_700.
   final TextStyle headlineLarge;
 
@@ -25,8 +19,6 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
   final TextStyle label;
 
   AppTextTheme._({
-    required this.titleLarge,
-    required this.titleSmall,
     required this.headlineLarge,
     required this.headlineMedium,
     required this.headlineSmall,
@@ -36,9 +28,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
 
   /// Base app text theme.
   AppTextTheme.base()
-      : titleLarge = AppTextStyle.titleLarge.value,
-        titleSmall = AppTextStyle.titleSmall.value,
-        headlineLarge = AppTextStyle.headlineLarge.value,
+      : headlineLarge = AppTextStyle.headlineLarge.value,
         headlineMedium = AppTextStyle.headlineMedium.value,
         headlineSmall = AppTextStyle.headlineSmall.value,
         body = AppTextStyle.body.value,
@@ -54,8 +44,6 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     }
 
     return AppTextTheme._(
-      titleLarge: TextStyle.lerp(titleLarge, other.titleLarge, t)!,
-      titleSmall: TextStyle.lerp(titleSmall, other.titleSmall, t)!,
       headlineLarge: TextStyle.lerp(headlineLarge, other.headlineLarge, t)!,
       headlineMedium: TextStyle.lerp(headlineMedium, other.headlineMedium, t)!,
       headlineSmall: TextStyle.lerp(headlineSmall, other.headlineSmall, t)!,
@@ -82,8 +70,6 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     TextStyle? label,
   }) {
     return AppTextTheme._(
-      titleLarge: titleLarge ?? this.titleLarge,
-      titleSmall: titleSmall ?? this.titleSmall,
       headlineLarge: headlineLarge ?? this.headlineLarge,
       headlineMedium: headlineMedium ?? this.headlineMedium,
       headlineSmall: headlineSmall ?? this.headlineSmall,
