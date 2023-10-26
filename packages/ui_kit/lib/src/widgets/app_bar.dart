@@ -3,11 +3,9 @@ import 'package:ui_kit/src/styles/colors/color_scheme.dart';
 import 'package:ui_kit/src/styles/text/text_extention.dart';
 
 class CustomAppBar extends StatelessWidget {
-class CustomAppBar extends StatelessWidget {
   final String title;
   final bool automaticallyImplyLeading;
 
-  const CustomAppBar({
   const CustomAppBar({
     required this.title,
     this.automaticallyImplyLeading = false,
@@ -66,7 +64,7 @@ class _AppBarTitle extends StatelessWidget {
       title,
       textAlign: TextAlign.center,
       overflow: TextOverflow.ellipsis,
-      style: AppTextTheme.of(context).titleLarge.copyWith(
+      style: AppTextTheme.of(context).headlineMedium.copyWith(
             color: AppColorScheme.of(context).onBackground,
           ),
     );

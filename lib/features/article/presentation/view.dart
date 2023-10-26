@@ -14,7 +14,7 @@ class ArticleView extends WidgetView<ArticleComponent> {
     }
 
     return ColoredBox(
-      color: const Color(0xFFFFFFFF),
+      color: AppColorScheme.of(context).background,
       child: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(

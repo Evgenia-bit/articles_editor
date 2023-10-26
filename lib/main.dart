@@ -29,10 +29,8 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: AppLocalizations.supportedLocales,
       title: 'Counter',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppThemeData.lightTheme,
+      darkTheme: AppThemeData.darkTheme,
       home: ArticleWidgetComponent(
         getArticleIdUseCase: repository,
         loadArticleUseCase: repository,
