@@ -8,12 +8,7 @@ import 'package:mapper/src/models/video_block_model.dart';
 import 'package:mapper/src/utils/safe_cast.dart';
 
 class BlockParser {
-  List<BlockModel> fromJson(Map<String, dynamic> json) {
-    final blocks = safeCast<List<Map<String, dynamic>>>(json['blocks']);
-    if (blocks == null) {
-      throw Exception('Data format is not correct: ${json['blocks']}');
-    }
-
+  List<BlockModel> fromJson(List<Map<String, dynamic>> blocks) {
     return blocks.map((block) {
       final data = safeCast<Map<String, dynamic>>(block['data']);
       try {
