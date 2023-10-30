@@ -15,9 +15,11 @@ class ArticleView extends WidgetView<ArticleComponent> {
       final ArticleStateFailure state => _StateFailureView(state),
     };
 
-    return ColoredBox(
-      color: AppColorScheme.of(context).background,
-      child: SafeArea(child: child),
+    return Scaffold(
+      body: ColoredBox(
+        color: AppColorScheme.of(context).background,
+        child: Center(child: child),
+      ),
     );
   }
 }
