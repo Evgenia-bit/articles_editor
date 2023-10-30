@@ -12,6 +12,7 @@ final router = GoRouter(
     GoRoute(
       path: '/',
       builder: (context, state) {
+        // TODO(Evgenia-bit): add DI
         final repository = ArticleListRepository(
           currentPage: 0,
           api: ArticlesApiStub(),
@@ -30,6 +31,7 @@ final router = GoRouter(
             if (id == null) {
               return const SizedBox.shrink();
             }
+            // TODO(Evgenia-bit): add DI
             final repository = ArticleRepository(
               articleId: id,
               api: ArticlesApiStub(),
@@ -38,7 +40,6 @@ final router = GoRouter(
 
             return ArticleWidgetComponent(
               loadArticleUseCase: repository,
-              getArticleIdUseCase: repository,
             );
           },
         ),

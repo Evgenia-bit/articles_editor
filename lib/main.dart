@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    // TODO(Evgenia-bit): add DI
     return MaterialApp.router(
       localizationsDelegates: const [
         AppLocalizations.delegate,
