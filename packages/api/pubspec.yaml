@@ -11,3 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   surf_lint_rules: ^3.0.0
+
+flutter:
+  assets:
+    - assets/data.json
+

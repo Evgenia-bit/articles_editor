@@ -1,6 +1,5 @@
 include: package:surf_lint_rules/analysis_options.yaml
 
-
 analyzer:
   errors:
     avoid_catches_without_on_clauses: false
