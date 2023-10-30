@@ -1,4 +1,11 @@
-import 'package:mapper/mapper.dart';
+import 'package:mapper/src/block_parser.dart';
+import 'package:mapper/src/blocks/heading_block.dart';
+import 'package:mapper/src/blocks/image_block.dart';
+import 'package:mapper/src/blocks/list_block.dart';
+import 'package:mapper/src/blocks/paragraph_block.dart';
+import 'package:mapper/src/blocks/video_block.dart';
+import 'package:mapper/src/mapper.dart';
+import 'package:mapper/src/models/list_block_model.dart';
 import 'package:test/test.dart';
 
 void main() {
