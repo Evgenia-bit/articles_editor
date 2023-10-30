@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+    // TODO(Evgenia-bit): add DI
     final repository = ArticleRepository(
       articleId: 1,
       api: ArticlesApiStub(),
@@ -31,10 +32,7 @@ class MyApp extends StatelessWidget {
       title: 'Counter',
       theme: AppThemeData.lightTheme,
       darkTheme: AppThemeData.darkTheme,
-      home: ArticleWidgetComponent(
-        getArticleIdUseCase: repository,
-        loadArticleUseCase: repository,
-      ),
+      home: ArticleWidgetComponent(loadArticleUseCase: repository),
     );
   }
 }

@@ -1,9 +1,5 @@
-import 'package:artus/features/article/data/models/article.dart';
-
-abstract interface class GetArticleIdUseCase {
-  int get articleId;
-}
+import 'package:artus/features/article/presentation/article_component.dart';
 
 abstract interface class LoadArticleUseCase {
-  Future<Article?> loadArticle();
+  Future<ArticleState> loadArticle();
 }

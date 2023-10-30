@@ -13,7 +13,9 @@ void main() {
   final widget = ArticleView(component);
 
   setUp(() {
-    when(() => component.article).thenReturn(_articleMock);
+    when(() => component.articleState).thenReturn(
+      ArticleStateData(article: _articleMock),
+    );
   });
 
   Future<void> buildArticleScreenWithTheme(

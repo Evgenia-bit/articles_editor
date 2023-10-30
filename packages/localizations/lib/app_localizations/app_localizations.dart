@@ -113,6 +113,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'You have pushed the button this many times:'**
   String get text;
+
+  /// No description provided for @errorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred'**
+  String get errorMessage;
 }
 
 class _AppLocalizationsDelegate

@@ -12,4 +12,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get text => 'You have pushed the button this many times:';
+
+  @override
+  String get errorMessage => 'An error occurred';
 }
