@@ -25,7 +25,7 @@ class ArticleRepository implements LoadArticleUseCase {
       if (articleDto == null) throw AppException('Article not found');
 
       return ArticleStateData(
-        warningMessage: articleDto.title != null ? 'Invalid title' : null,
+        warningMessage: articleDto.title == null ? 'Invalid title' : null,
         article: Article(
           title: articleDto.title ?? '',
           blocks: _mapper.getBlocksFromJson(articleDto.blocks),
