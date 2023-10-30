@@ -15,4 +15,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get readButtonText => 'Read';
+
+  @override
+  String get errorMessage => 'An error occurred';
 }

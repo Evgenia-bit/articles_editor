@@ -119,6 +119,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Read'**
   String get readButtonText;
+
+  /// No description provided for @errorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred'**
+  String get errorMessage;
 }
 
 class _AppLocalizationsDelegate

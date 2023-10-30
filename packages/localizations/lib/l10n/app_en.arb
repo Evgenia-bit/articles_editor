@@ -2,5 +2,6 @@
   "increment": "Increment",
   "decrement": "Decrement",
   "text": "You have pushed the button this many times:",
-  "readButtonText": "Read"
+  "readButtonText": "Read",
+  "errorMessage": "An error occurred"
 }

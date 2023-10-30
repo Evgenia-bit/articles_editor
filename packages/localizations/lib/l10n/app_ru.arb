@@ -2,5 +2,6 @@
   "increment": "Увеличить",
   "decrement": "Уменьшить",
   "text": "Вы нажимали на кнопку столько раз:",
-  "readButtonText": "Читать"
+  "readButtonText": "Читать",
+  "errorMessage": "Произошла ошибка"
 }

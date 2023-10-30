@@ -1,18 +1,16 @@
-import 'package:artus/features/article/data/models/article.dart';
 import 'package:artus/features/article/domain/use_case.dart';
 import 'package:artus/features/article/presentation/article_component.dart';
 import 'package:artus/features/article/presentation/view.dart';
 import 'package:core/core.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:ui_kit/ui_kit.dart';
 
 class ArticleWidgetComponent extends StatefulWidget {
   const ArticleWidgetComponent({
-    required this.getArticleIdUseCase,
     required this.loadArticleUseCase,
     super.key,
   });
 
-  final GetArticleIdUseCase getArticleIdUseCase;
   final LoadArticleUseCase loadArticleUseCase;
 
   @override
@@ -32,11 +30,25 @@ class _ArticleWidgetComponentState
     super.initState();
     widget.loadArticleUseCase.loadArticle().then((result) {
       setState(() {
-        article = result;
+        articleState = result;
       });
+      if (result is ArticleStateData && result.warningMessage != null) {
+        showWarningSnackBar(result.warningMessage!);
+      }
     });
   }
 
   @override
-  Article? article;
+  ArticleState articleState = ArticleStateLoading();
+
+  void showWarningSnackBar(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          message,
+          style: AppTextTheme.of(context).body,
+        ),
+      ),
+    );
+  }
 }
