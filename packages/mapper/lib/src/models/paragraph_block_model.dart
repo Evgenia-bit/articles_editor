@@ -20,6 +20,8 @@ class CustomParagraphBlockModel extends ParagraphBlockModel {
   @override
   late final List<ParagraphItem> children;
 
+  CustomParagraphBlockModel({required this.children});
+
   CustomParagraphBlockModel.fromJson(Map<String, dynamic>? json) {
     children = _childrenFromJson(json?['children']);
   }
@@ -38,6 +40,8 @@ class CustomParagraphItem extends ParagraphItem {
   @override
   final ParagraphItemStyle style;
 
+  CustomParagraphItem({required this.text, required this.style});
+
   CustomParagraphItem.fromJson(Map<String, dynamic> json)
       : style = CustomParagraphItemStyle.fromJson(
           safeCast<Map<String, dynamic>>(json['style']),
@@ -53,6 +57,12 @@ class CustomParagraphItemStyle extends ParagraphItemStyle {
   final bool isItalic;
   @override
   final bool isMonospaced;
+
+  CustomParagraphItemStyle({
+    required this.isBold,
+    required this.isItalic,
+    required this.isMonospaced,
+  });
 
   CustomParagraphItemStyle.fromJson(Map<String, dynamic>? json)
       : isBold = safeCast<bool>(json?['is_bold']) ?? false,

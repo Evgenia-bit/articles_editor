@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mapper/src/blocks/block.dart';
 import 'package:mapper/src/models/image_block_model.dart';
+import 'package:mapper/src/utils/export_to_html.dart';
 
 const _noImageAssetName = 'packages/mapper/assets/no_image.png';
 
@@ -24,5 +25,10 @@ class ImageBlock extends Block<ImageBlockModel> {
         },
       ),
     );
+  }
+
+  @override
+  String accept(Visitor visitor) {
+  return  visitor.exportImageBlock(this);
   }
 }

@@ -15,5 +15,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get readButtonText => 'Читать';
+
+  @override
   String get errorMessage => 'Произошла ошибка';
 }

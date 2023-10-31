@@ -13,6 +13,8 @@ class CustomHeadingBlockModel extends HeadingBlockModel {
   @override
   final String text;
 
+  CustomHeadingBlockModel({required this.level, required this.text});
+
   ///If the header level parsing fails, the largest one is set by default.
   CustomHeadingBlockModel.fromJson(Map<String, dynamic>? json)
       : level = safeCast<int>(json?['level']) ?? 1,

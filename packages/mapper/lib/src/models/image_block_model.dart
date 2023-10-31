@@ -8,6 +8,8 @@ class CustomImageBlockModel extends ImageBlockModel {
   @override
   final String url;
 
+  CustomImageBlockModel({required this.url});
+
   CustomImageBlockModel.fromJson(Map<String, dynamic>? json)
       : url = json?['url'] as String;
 }

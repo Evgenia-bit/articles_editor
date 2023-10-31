@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mapper/src/blocks/block.dart';
 import 'package:mapper/src/models/list_block_model.dart';
+import 'package:mapper/src/utils/export_to_html.dart';
 import 'package:mapper/src/widgets/list.dart';
 import 'package:ui_kit/ui_kit.dart';
 
@@ -25,6 +26,11 @@ class BulletedListBlock extends ListBlock {
       ),
     );
   }
+
+  @override
+  String accept(Visitor visitor) {
+    return visitor.exportBulletedListBlock(this);
+  }
 }
 
 class OrderedListBlock extends ListBlock {
@@ -41,5 +47,10 @@ class OrderedListBlock extends ListBlock {
             ),
       ),
     );
+  }
+
+  @override
+  String accept(Visitor visitor) {
+    return visitor.exportOrderedListBlock(this);
   }
 }
