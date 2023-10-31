@@ -29,6 +29,6 @@ class ImageBlock extends Block<ImageBlockModel> {
 
   @override
   String accept(Visitor visitor) {
-  return  visitor.exportImageBlock(this);
+    return visitor.exportImageBlock(this);
   }
 }

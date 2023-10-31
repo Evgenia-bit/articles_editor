@@ -41,6 +41,6 @@ class ParagraphBlock extends Block<ParagraphBlockModel> {
 
   @override
   String accept(Visitor visitor) {
-   return visitor.exportParagraphBlock(this);
+    return visitor.exportParagraphBlock(this);
   }
 }

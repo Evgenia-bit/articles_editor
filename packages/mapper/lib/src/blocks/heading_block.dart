@@ -25,6 +25,6 @@ class HeadingBlock extends Block<HeadingBlockModel> {
 
   @override
   String accept(Visitor visitor) {
-   return visitor.exportHeadingBlock(this);
+    return visitor.exportHeadingBlock(this);
   }
 }

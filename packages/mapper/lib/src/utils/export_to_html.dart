@@ -23,17 +23,21 @@ class HtmlExportVisitor implements Visitor {
 
   @override
   String exportBulletedListBlock(ListBlock block) {
-    final items = block.model.items.map(
-      (item) => '<li>${exportParagraphBlock(ParagraphBlock(item))}</li>',
-    ).join();
+    final items = block.model.items
+        .map(
+          (item) => '<li>${exportParagraphBlock(ParagraphBlock(item))}</li>',
+        )
+        .join();
     return '<ul>$items</ul>';
   }
 
   @override
   String exportOrderedListBlock(OrderedListBlock block) {
-    final items = block.model.items.map(
-      (item) => '<li>${exportParagraphBlock(ParagraphBlock(item))}</li>',
-    ).join();
+    final items = block.model.items
+        .map(
+          (item) => '<li>${exportParagraphBlock(ParagraphBlock(item))}</li>',
+        )
+        .join();
     return '<ol>$items</ol>';
   }
 
