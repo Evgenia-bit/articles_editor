@@ -6,14 +6,14 @@ class ArticleListRepository
     implements
         GetCurrentPageUseCase,
         IncrementCurrentPageUseCase,
-        LoadArticlesUseCase,
+        LoadArticleListUseCase,
         GetArticlesCountUseCase {
   ArticleListRepository({
     required this.currentPage,
-    required ArticlesApiStub api,
+    required ArticlesApi api,
   }) : _api = api;
 
-  final ArticlesApiStub _api;
+  final ArticlesApi _api;
 
   @override
   int currentPage;
@@ -25,24 +25,32 @@ class ArticleListRepository
   int articlesCount = 0;
 
   @override
-  Future<List<ArticleListItem>> loadArticles({
+  Future<(List<ArticleListItem>, String?)> loadArticles({
     int page = 0,
     int limit = 5,
   }) async {
-    final (articles, count) = await _api.getAll(
-      page: currentPage,
-      limit: limit,
-    );
-    articlesCount = count;
-    return articles
-        .map(
-          (a) => ArticleListItem(
-            id: a.id,
-            title: a.title,
-            description: a.description,
-            imageUrl: a.imageUrl,
-          ),
-        )
-        .toList();
+    try {
+      final (articles, count) = await _api.getAll(
+        page: currentPage,
+        limit: limit,
+      );
+      articlesCount = count;
+
+      return (
+        articles
+            .map(
+              (a) => ArticleListItem(
+                id: a.id,
+                title: a.title,
+                description: a.description,
+                imageUrl: a.imageUrl,
+              ),
+            )
+            .toList(),
+        null
+      );
+    } catch (e) {
+      return (<ArticleListItem>[], 'An error has occurred');
+    }
   }
 }

@@ -19,7 +19,7 @@ final router = GoRouter(
         );
         return ArticleListWidgetComponent(
           incrementCurrentPageUseCase: repository,
-          loadArticlesUseCase: repository,
+          loadArticleListUseCase: repository,
           getArticlesCountUseCase: repository,
         );
       },

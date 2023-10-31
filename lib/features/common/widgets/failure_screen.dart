@@ -3,7 +3,13 @@ import 'package:ui_kit/ui_kit.dart';
 
 class FailureScreen extends StatelessWidget {
   final String text;
-  const FailureScreen({required this.text, super.key});
+  final bool withAppBar;
+
+  const FailureScreen({
+    required this.text,
+    this.withAppBar = true,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +19,11 @@ class FailureScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            const CustomAppBar(
-              title: '',
-              automaticallyImplyLeading: true,
-            ),
+            if (withAppBar)
+              const CustomAppBar(
+                title: '',
+                automaticallyImplyLeading: true,
+              ),
             Expanded(
               child: Center(
                 child: Text(
