@@ -3,5 +3,6 @@ import 'package:flutter/widgets.dart';
 
 abstract class ArticleListComponent {
   List<ArticleListItem> get articles;
+  String? get failureMessage;
   ScrollController get scrollController;
 }

@@ -15,6 +15,7 @@ class ArticleListWidgetComponent extends StatefulWidget {
 
   final IncrementCurrentPageUseCase incrementCurrentPageUseCase;
   final LoadArticleListUseCase loadArticleListUseCase;
+  final LoadArticleListUseCase loadArticleListUseCase;
   final GetArticlesCountUseCase getArticlesCountUseCase;
 
   @override
@@ -38,10 +39,13 @@ class _ArticleListWidgetComponentState
   }
 
   @override
+  late final ScrollController scrollController;
+
+  @override
   List<ArticleListItem> articles = [];
 
   @override
-  late final ScrollController scrollController;
+  String? failureMessage;
 
   Future<void> _loadPage() async {
     if (_isMaxScroll && !_isMaxArticlesCount) {
@@ -51,9 +55,11 @@ class _ArticleListWidgetComponentState
   }
 
   Future<void> _updateArticles() async {
-    final newArticles = await widget.loadArticleListUseCase.loadArticles();
+    final (newArticles, error) =
+        await widget.loadArticleListUseCase.loadArticles();
     setState(() {
       articles.addAll(newArticles);
+      failureMessage = error;
     });
   }
 

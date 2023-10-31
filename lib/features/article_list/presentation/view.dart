@@ -1,5 +1,6 @@
 import 'package:artus/features/article_list/data/models/article_list_item.dart';
 import 'package:artus/features/article_list/presentation/article_list_component.dart';
+import 'package:artus/features/common/widgets/failure_screen.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -11,6 +12,13 @@ class ArticleListView extends WidgetView<ArticleListComponent> {
 
   @override
   Widget build(BuildContext context) {
+    if (component.failureMessage != null) {
+      return FailureScreen(
+        text: component.failureMessage!,
+        withAppBar: false,
+      );
+    }
+
     return ColoredBox(
       color: AppColorScheme.of(context).background,
       child: SafeArea(

@@ -9,7 +9,8 @@ abstract interface class GetCurrentPageUseCase {
 }
 
 abstract interface class LoadArticleListUseCase {
-  Future<List<ArticleListItem>> loadArticles({int page, int limit});
+  /// Returns an list with articles and the error text, if it occurred
+  Future<(List<ArticleListItem>, String?)> loadArticles({int page, int limit});
 }
 
 abstract interface class GetArticlesCountUseCase {
