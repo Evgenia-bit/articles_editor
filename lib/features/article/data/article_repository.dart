@@ -23,7 +23,6 @@ class ArticleRepository implements LoadArticleUseCase {
     try {
       final articleDto = await _api.getById(articleId);
       if (articleDto == null) throw AppException('Article not found');
-
       return ArticleStateData(
         warningMessage: articleDto.title == null ? 'Invalid title' : null,
         article: Article(

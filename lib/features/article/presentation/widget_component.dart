@@ -19,6 +19,7 @@ class ArticleWidgetComponent extends StatefulWidget {
 
 class _ArticleWidgetComponentState
     extends ComponentState<ArticleWidgetComponent, ArticleComponent>
+    with SingleTickerProviderStateMixin
     implements ArticleComponent {
   @override
   WidgetView<ArticleComponent> buildView(BuildContext context) {
@@ -32,8 +33,9 @@ class _ArticleWidgetComponentState
       setState(() {
         articleState = result;
       });
+
       if (result is ArticleStateData && result.warningMessage != null) {
-        showWarningSnackBar(result.warningMessage!);
+        showSnackBar(result.warningMessage!);
       }
     });
   }
@@ -41,14 +43,14 @@ class _ArticleWidgetComponentState
   @override
   ArticleState articleState = ArticleStateLoading();
 
-  void showWarningSnackBar(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          message,
-          style: AppTextTheme.of(context).body,
-        ),
-      ),
+  Future<void> showSnackBar(String text) async {
+    final entry = OverlayEntry(
+      builder: (context) {
+        return CustomSnackBar(text: text);
+      },
     );
+    Overlay.of(context).insert(entry);
+    await Future.delayed(const Duration(seconds: 5));
+    entry.remove();
   }
 }
