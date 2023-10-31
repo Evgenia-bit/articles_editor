@@ -24,6 +24,7 @@ class _ArticleListEntryState extends State<ArticleListEntry>
   @override
   void initState() {
     _repository = ArticleListRepository(
+      logger: widget.appAssembly.logger,
       api: widget.appAssembly.articlesApi,
       currentPage: 0,
     );

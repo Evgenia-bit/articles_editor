@@ -27,6 +27,7 @@ class _ArticleEntryState extends State<ArticleEntry> {
       articleId: widget.articleId,
       api: widget.appAssembly.articlesApi,
       mapper: widget.appAssembly.mapper,
+      logger: widget.appAssembly.logger,
     );
     super.initState();
   }
