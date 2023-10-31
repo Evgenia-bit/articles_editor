@@ -1,6 +1,5 @@
 import 'package:artus/features/article/presentation/article_component.dart';
 import 'package:artus/features/common/widgets/failure_screen.dart';
-import 'package:artus/features/common/widgets/failure_screen.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:localizations/localizations.dart';
