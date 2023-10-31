@@ -15,7 +15,6 @@ class ArticleListWidgetComponent extends StatefulWidget {
 
   final IncrementCurrentPageUseCase incrementCurrentPageUseCase;
   final LoadArticleListUseCase loadArticleListUseCase;
-  final LoadArticleListUseCase loadArticleListUseCase;
   final GetArticlesCountUseCase getArticlesCountUseCase;
 
   @override
