@@ -1,4 +1,5 @@
 import 'package:artus/features/article/presentation/article_component.dart';
+import 'package:artus/features/common/widgets/failure_screen.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:localizations/localizations.dart';
@@ -50,9 +51,7 @@ class _StateDataView extends StatelessWidget {
 class _StateLoadingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: CircularProgressIndicator(),
-    );
+    return const CircularProgressIndicator();
   }
 }
 
@@ -62,28 +61,8 @@ class _StateFailureView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        children: [
-          const CustomAppBar(
-            title: '',
-            automaticallyImplyLeading: true,
-          ),
-          Expanded(
-            child: Center(
-              child: Text(
-                state.errorMessage ??
-                    AppLocalizations.of(context)!.errorMessage,
-                style: AppTextTheme.of(context).body.copyWith(
-                      color: AppColorScheme.of(context).error,
-                    ),
-              ),
-            ),
-          ),
-          const SizedBox(height: 70),
-        ],
-      ),
+    return FailureScreen(
+      text: state.errorMessage ?? AppLocalizations.of(context)!.errorMessage,
     );
   }
 }

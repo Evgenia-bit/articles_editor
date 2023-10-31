@@ -8,7 +8,7 @@ abstract interface class GetCurrentPageUseCase {
   int get currentPage;
 }
 
-abstract interface class LoadArticlesUseCase {
+abstract interface class LoadArticleListUseCase {
   Future<List<ArticleListItem>> loadArticles({int page, int limit});
 }
 

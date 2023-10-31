@@ -8,13 +8,13 @@ import 'package:flutter/widgets.dart';
 class ArticleListWidgetComponent extends StatefulWidget {
   const ArticleListWidgetComponent({
     required this.incrementCurrentPageUseCase,
-    required this.loadArticlesUseCase,
+    required this.loadArticleListUseCase,
     required this.getArticlesCountUseCase,
     super.key,
   });
 
   final IncrementCurrentPageUseCase incrementCurrentPageUseCase;
-  final LoadArticlesUseCase loadArticlesUseCase;
+  final LoadArticleListUseCase loadArticleListUseCase;
   final GetArticlesCountUseCase getArticlesCountUseCase;
 
   @override
@@ -51,7 +51,7 @@ class _ArticleListWidgetComponentState
   }
 
   Future<void> _updateArticles() async {
-    final newArticles = await widget.loadArticlesUseCase.loadArticles();
+    final newArticles = await widget.loadArticleListUseCase.loadArticles();
     setState(() {
       articles.addAll(newArticles);
     });

@@ -6,14 +6,14 @@ class ArticleListRepository
     implements
         GetCurrentPageUseCase,
         IncrementCurrentPageUseCase,
-        LoadArticlesUseCase,
+        LoadArticleListUseCase,
         GetArticlesCountUseCase {
   ArticleListRepository({
     required this.currentPage,
-    required ArticlesApiStub api,
+    required ArticlesApi api,
   }) : _api = api;
 
-  final ArticlesApiStub _api;
+  final ArticlesApi _api;
 
   @override
   int currentPage;
