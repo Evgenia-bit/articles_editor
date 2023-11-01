@@ -48,3 +48,5 @@ pubspec_overrides.yaml
 
 **/failures/*.png
 
+.fvm/flutter_sdk
+
