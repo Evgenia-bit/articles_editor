@@ -47,15 +47,9 @@ class _BackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20),
-      child: GestureDetector(
-        onTap: () => Navigator.of(context).pop(),
-        child: Icon(
-          Icons.arrow_back_ios,
-          color: AppColorScheme.of(context).onBackground,
-        ),
-      ),
+    return GestureDetector(
+      onTap: () => Navigator.of(context).pop(),
+      child: const Icon(Icons.arrow_back_ios),
     );
   }
 }
@@ -70,7 +64,7 @@ class _AppBarTitle extends StatelessWidget {
       title,
       textAlign: TextAlign.center,
       overflow: TextOverflow.ellipsis,
-      style: AppTextTheme.of(context).titleLarge.copyWith(
+      style: AppTextTheme.of(context).headlineMedium.copyWith(
             color: AppColorScheme.of(context).onBackground,
           ),
     );

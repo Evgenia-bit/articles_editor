@@ -9,6 +9,8 @@ environment:
   flutter: 3.13.0
 
 dependencies:
+  api:
+    path: packages/api
   core:
     path: packages/core
   cupertino_icons: ^1.0.2
