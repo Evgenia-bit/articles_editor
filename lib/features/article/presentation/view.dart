@@ -1,8 +1,8 @@
+import 'package:artus/features/article/domain/models/article_state.dart';
 import 'package:artus/features/article/presentation/article_component.dart';
 import 'package:artus/features/common/widgets/failure_screen.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
-import 'package:localizations/localizations.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 class ArticleView extends WidgetView<ArticleComponent> {
@@ -13,7 +13,7 @@ class ArticleView extends WidgetView<ArticleComponent> {
     return switch (component.articleState) {
       final ArticleStateData state => _StateDataView(state),
       ArticleStateLoading _ => _StateLoadingView(),
-      final ArticleStateFailure state => _StateFailureView(state),
+      final ArticleStateFailure _ => const FailureScreen(),
     };
   }
 }
@@ -52,18 +52,6 @@ class _StateLoadingView extends StatelessWidget {
       child: const Center(
         child: CircularProgressIndicator(),
       ),
-    );
-  }
-}
-
-class _StateFailureView extends StatelessWidget {
-  final ArticleStateFailure state;
-  const _StateFailureView(this.state);
-
-  @override
-  Widget build(BuildContext context) {
-    return FailureScreen(
-      text: state.errorMessage ?? AppLocalizations.of(context)!.errorMessage,
     );
   }
 }

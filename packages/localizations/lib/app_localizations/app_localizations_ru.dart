@@ -14,5 +14,14 @@ class AppLocalizationsRu extends AppLocalizations {
   String get text => 'Вы нажимали на кнопку столько раз:';
 
   @override
-  String get errorMessage => 'Произошла ошибка';
+  String get failure => 'Ошибка';
+
+  @override
+  String get failureUnknown => 'Произошла неизвестная ошибка';
+
+  @override
+  String get failureInvalidTitle => 'Некорректный заголовок';
+
+  @override
+  String get failureArticleNotFound => 'Статья не найдена';
 }

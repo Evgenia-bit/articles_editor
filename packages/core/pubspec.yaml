@@ -9,4 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  localizations:
+    path: ../localizations
   surf_lint_rules: ^3.0.0
+  ui_kit:
+    path: ../ui_kit

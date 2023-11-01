@@ -24,6 +24,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.2"
+  artus_logger:
+    dependency: "direct main"
+    description:
+      path: "packages/artus_logger"
+      relative: true
+    source: path
+    version: "1.0.0"
   async:
     dependency: transitive
     description:
@@ -64,14 +71,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.1"
+  cli_notify:
+    dependency: transitive
+    description:
+      name: cli_notify
+      sha256: "778987d49794f07a25d34369a158600e325b6d0f2671f361a81143511db569f5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.4"
   cli_util:
     dependency: transitive
     description:
       name: cli_util
-      sha256: b8db3080e59b2503ca9e7922c3df2072cf13992354d5e944074ffa836fba43b7
+      sha256: "66f86e916d285c1a93d3b79587d94bd71984a66aac4ff74e524cfa7877f1395c"
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.0"
+    version: "0.3.5"
   clock:
     dependency: transitive
     description:
@@ -88,6 +103,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.2"
+  console:
+    dependency: transitive
+    description:
+      name: console
+      sha256: e04e7824384c5b39389acdd6dc7d33f3efe6b232f6f16d7626f194f6a01ad69a
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.0"
   conventional_commit:
     dependency: transitive
     description:
@@ -119,6 +142,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  date_format:
+    dependency: transitive
+    description:
+      name: date_format
+      sha256: "8e5154ca363411847220c8cbc43afcf69c08e8debe40ba09d57710c25711760c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.7"
   fake_async:
     dependency: transitive
     description:
@@ -163,6 +194,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  fvm:
+    dependency: "direct main"
+    description:
+      name: fvm
+      sha256: "5b6f5ee02e779c555e5e2a782bbdca794bcc738daf2aad3ef8e399721c3ec85d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
   glob:
     dependency: transitive
     description:
@@ -250,6 +289,14 @@ packages:
       relative: true
     source: path
     version: "1.0.0"
+  logger:
+    dependency: transitive
+    description:
+      name: logger
+      sha256: "6bbb9d6f7056729537a4309bda2e74e18e5d9f14302489cc1e93f33b3fe32cac"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2+1"
   mapper:
     dependency: "direct main"
     description:
@@ -345,6 +392,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.4"
+  process_run:
+    dependency: transitive
+    description:
+      name: process_run
+      sha256: "4539b7c0a34a4a4979e7345d9f5c6358961d9f53901baf2930807159d08ee59b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.12.5+3"
   prompts:
     dependency: transitive
     description:
@@ -430,6 +485,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
+  synchronized:
+    dependency: transitive
+    description:
+      name: synchronized
+      sha256: "5fcbd27688af6082f5abd611af56ee575342c30e87541d0245f7ff99faa02c60"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
   term_glyph:
     dependency: transitive
     description:
@@ -446,6 +509,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.0"
+  tint:
+    dependency: transitive
+    description:
+      name: tint
+      sha256: "9652d9a589f4536d5e392cf790263d120474f15da3cf1bee7f1fdb31b4de5f46"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   typed_data:
     dependency: transitive
     description:
@@ -542,5 +613,5 @@ packages:
     source: hosted
     version: "2.1.1"
 sdks:
-  dart: ">=3.1.0 <4.0.0"
+  dart: "3.1.5"
   flutter: ">=3.13.0"

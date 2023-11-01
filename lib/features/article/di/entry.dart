@@ -2,7 +2,9 @@ import 'package:artus/features/app/di/i_app_assembly.dart';
 import 'package:artus/features/article/data/article_repository.dart';
 import 'package:artus/features/article/di/assembly.dart';
 import 'package:artus/features/article/domain/use_case.dart';
+import 'package:artus/features/article/presentation/article_failure_displayer.dart';
 import 'package:artus/features/article/presentation/widget_component.dart';
+import 'package:core/core.dart';
 import 'package:flutter/widgets.dart';
 
 class ArticleEntry extends StatefulWidget {
@@ -29,6 +31,7 @@ class _ArticleEntryState extends State<ArticleEntry>
       articleId: widget.articleId,
       api: widget.appAssembly.articlesApi,
       mapper: widget.appAssembly.mapper,
+      logger: widget.appAssembly.logger,
     );
     super.initState();
   }
@@ -36,8 +39,13 @@ class _ArticleEntryState extends State<ArticleEntry>
   @override
   Widget build(BuildContext context) => ArticleWidgetComponent(
         loadArticleUseCase: loadArticleUseCase,
+        failureDisplayer: failureDisplayer,
       );
 
   @override
   LoadArticleUseCase get loadArticleUseCase => _repository;
+
+  @override
+  FailureDisplayer get failureDisplayer =>
+      ArticleFailureDisolayer(widget.appAssembly.messageController);
 }

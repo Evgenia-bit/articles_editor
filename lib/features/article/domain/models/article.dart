@@ -5,7 +5,7 @@ class Article {
   final List<Block> blocks;
 
   const Article({
-    required this.title,
     required this.blocks,
-  });
+    String? title,
+  }) : title = title ?? '';
 }

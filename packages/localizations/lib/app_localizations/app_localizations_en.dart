@@ -14,5 +14,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get text => 'You have pushed the button this many times:';
 
   @override
-  String get errorMessage => 'An error occurred';
+  String get failure => 'Error';
+
+  @override
+  String get failureUnknown => 'An unknown error has occurred';
+
+  @override
+  String get failureInvalidTitle => 'Incorrect title';
+
+  @override
+  String get failureArticleNotFound => 'Article not found';
 }
