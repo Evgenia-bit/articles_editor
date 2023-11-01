@@ -11,6 +11,8 @@ environment:
 dependencies:
   api:
     path: packages/api
+  artus_logger:
+    path: packages/artus_logger
   core:
     path: packages/core
   cupertino_icons: ^1.0.2
