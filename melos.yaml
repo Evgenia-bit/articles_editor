@@ -1,9 +1,9 @@
 name: artus
 
+sdkPath: .fvm/flutter_sdk
+
 packages:
   - packages/*
-
-sdkPath: .fvm/flutter_sdk
 
 command:
   bootstrap:
