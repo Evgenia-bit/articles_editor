@@ -3,6 +3,8 @@ name: artus
 packages:
   - packages/*
 
+sdkPath: .fvm/flutter_sdk
+
 command:
   bootstrap:
     hooks:
