@@ -1,5 +1,7 @@
 name: artus
 
+sdkPath: .fvm/flutter_sdk
+
 packages:
   - packages/*
 
