@@ -3,18 +3,20 @@ import 'package:flutter/widgets.dart';
 import 'package:localizations/localizations.dart';
 
 class FailureDisplayer {
-  final MessageController messageController;
+  final MessageController _messageController;
 
-  FailureDisplayer(this.messageController);
+  FailureDisplayer(MessageController messageController)
+      : _messageController = messageController;
 
   Future<void> display(BuildContext context, Object failure) async {
     final l10n = AppLocalizations.of(context)!;
 
     if (failure is Failure) {
       return _displayFailure(context, failure);
+      return _displayFailure(context, failure);
     }
 
-    await messageController.show(context, l10n.failureUnknown);
+    await _messageController.show(context, l10n.failureUnknown);
   }
 
   Future<void> _displayFailure(BuildContext context, Failure failure) async {

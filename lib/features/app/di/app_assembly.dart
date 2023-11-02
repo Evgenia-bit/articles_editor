@@ -22,7 +22,6 @@ class AppAssembly implements IAppAssembly {
 
   @override
   LogWriter get logger => _logger;
-
   @override
   FailureDisplayer get failureDisplayer => _failureDisplayer;
 
