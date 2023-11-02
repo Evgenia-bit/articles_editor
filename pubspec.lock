@@ -211,7 +211,7 @@ packages:
     source: hosted
     version: "2.1.2"
   golden_toolkit:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: golden_toolkit
       sha256: "8f74adab33154fe7b731395782797021f97d2edc52f7bfb85ff4f1b5c4a215f0"
@@ -324,10 +324,10 @@ packages:
     dependency: "direct dev"
     description:
       name: melos
-      sha256: "3f22f6cc629d72acf3acc8a7f8563384550290fa30790efa328c9cf606aa17d7"
+      sha256: a45e54b72cc2444b46be9d32a590119b9ba8c4e87117f2743a73ec049542f2d3
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.1"
+    version: "3.2.0"
   meta:
     dependency: transitive
     description:
@@ -336,6 +336,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  mocktail:
+    dependency: "direct main"
+    description:
+      name: mocktail
+      sha256: bac151b31e4ed78bd59ab89aa4c0928f297b1180186d5daf03734519e5f596c1
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   mustache_template:
     dependency: transitive
     description:

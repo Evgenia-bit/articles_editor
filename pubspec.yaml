@@ -19,10 +19,12 @@ dependencies:
   flutter:
     sdk: flutter
   fvm: ^2.4.1
+  golden_toolkit: ^0.15.0
   localizations:
     path: packages/localizations
   mapper:
     path: packages/mapper
+  mocktail: ^1.0.1
   surf_lint_rules: ^3.0.0
   ui_kit:
     path: packages/ui_kit

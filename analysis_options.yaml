@@ -4,3 +4,4 @@ analyzer:
   errors:
     avoid_catches_without_on_clauses: false
     type_annotate_public_apis: false
+    one_member_abstracts: false

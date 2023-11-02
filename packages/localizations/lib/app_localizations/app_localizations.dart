@@ -113,6 +113,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'You have pushed the button this many times:'**
   String get text;
+
+  /// No description provided for @failure.
+  ///
+  /// In en, this message translates to:
+  /// **'Error'**
+  String get failure;
+
+  /// No description provided for @failureUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'An unknown error has occurred'**
+  String get failureUnknown;
+
+  /// No description provided for @failureInvalidTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect title'**
+  String get failureInvalidTitle;
+
+  /// No description provided for @failureArticleNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Article not found'**
+  String get failureArticleNotFound;
 }
 
 class _AppLocalizationsDelegate

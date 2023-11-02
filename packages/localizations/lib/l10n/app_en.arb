@@ -1,5 +1,9 @@
 {
   "increment": "Increment",
   "decrement": "Decrement",
-  "text": "You have pushed the button this many times:"
+  "text": "You have pushed the button this many times:",
+  "failure": "Error",
+  "failureUnknown": "An unknown error has occurred",
+  "failureInvalidTitle": "Incorrect title",
+  "failureArticleNotFound": "Article not found"
 }
