@@ -8,5 +8,5 @@ abstract interface class IAppAssembly {
   Mapper get mapper;
   BlockParser get blockParser;
   LogWriter get logger;
-  MessageController get messageController;
+  FailureDisplayer get failureDisplayer;
 }
