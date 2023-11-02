@@ -1,4 +1,5 @@
-import 'package:artus/features/article/data/models/article.dart';
+import 'package:artus/features/article/domain/models/article.dart';
+import 'package:artus/features/article/domain/models/article_state.dart';
 import 'package:artus/features/article/presentation/article_component.dart';
 import 'package:artus/features/article/presentation/view.dart';
 import 'package:flutter/material.dart';

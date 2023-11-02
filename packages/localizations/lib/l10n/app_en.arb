@@ -3,5 +3,8 @@
   "decrement": "Decrement",
   "text": "You have pushed the button this many times:",
   "readButtonText": "Read",
-  "errorMessage": "An error occurred"
+  "failure": "Error",
+  "failureUnknown": "An unknown error has occurred",
+  "failureInvalidTitle": "Incorrect title",
+  "failureArticleNotFound": "Article not found"
 }

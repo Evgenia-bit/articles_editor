@@ -7,7 +7,7 @@ class CustomAppBar extends StatelessWidget {
   final bool automaticallyImplyLeading;
 
   const CustomAppBar({
-    required this.title,
+    this.title = '',
     this.automaticallyImplyLeading = false,
     super.key,
   });

@@ -1,4 +1,4 @@
-name: core
+name: artus_logger
 publish_to: 'none'
 
 version: 1.0.0
@@ -9,8 +9,4 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  localizations:
-    path: ../localizations
-  surf_lint_rules: ^3.0.0
-  ui_kit:
-    path: ../ui_kit
+  logger: ^2.0.2+1

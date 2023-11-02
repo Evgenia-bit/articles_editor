@@ -29,7 +29,8 @@ class ArticlesApiStub implements ArticlesApi {
   @override
   Future<ArticleDto?> getById(int id) async {
     final articleList = await _getData();
-    final article = articleList.firstWhere((a) => a['id'] == id);
+    final article = articleList.where((a) => a['id'] == id).firstOrNull;
+    if (article == null) return null;
     return ArticleDto.fromJson(article);
   }
 

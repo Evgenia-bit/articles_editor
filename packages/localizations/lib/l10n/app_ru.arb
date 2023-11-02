@@ -3,5 +3,8 @@
   "decrement": "Уменьшить",
   "text": "Вы нажимали на кнопку столько раз:",
   "readButtonText": "Читать",
-  "errorMessage": "Произошла ошибка"
+  "failure": "Ошибка",
+  "failureUnknown": "Произошла неизвестная ошибка",
+  "failureInvalidTitle": "Некорректный заголовок",
+  "failureArticleNotFound": "Статья не найдена"
 }
