@@ -8,6 +8,8 @@ class CustomVideoBlockModel extends VideoBlockModel {
   @override
   final String url;
 
+  CustomVideoBlockModel({required this.url});
+
   CustomVideoBlockModel.fromJson(Map<String, dynamic>? json)
       : url = json?['url'] as String;
 }

@@ -24,6 +24,8 @@ class CustomListBlockModel extends ListBlockModel {
   @override
   final ListType listType;
 
+  CustomListBlockModel({required this.items, required this.listType});
+
   CustomListBlockModel.fromJson(Map<String, dynamic>? json)
       : listType = listTypeMap[json?['type']]! {
     items = _itemsFromJson(json?['items']);

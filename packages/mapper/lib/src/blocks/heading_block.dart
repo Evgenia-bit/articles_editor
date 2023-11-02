@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:mapper/src/blocks/block.dart';
 import 'package:mapper/src/models/heading_block_model.dart';
+import 'package:mapper/src/utils/export_to_html.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 class HeadingBlock extends Block<HeadingBlockModel> {
@@ -20,5 +21,10 @@ class HeadingBlock extends Block<HeadingBlockModel> {
         _ => textTheme.headlineSmall.copyWith(color: color),
       },
     );
+  }
+
+  @override
+  String accept(Visitor visitor) {
+    return visitor.exportHeadingBlock(this);
   }
 }
