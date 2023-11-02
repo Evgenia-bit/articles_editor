@@ -21,7 +21,7 @@ jobs:
         run: dart pub global activate melos
 
       - name: Bootstrap
-        run: melos bootstrap --sdk-path ${{ env.GITHUB_ACTION_PATH }}/flutter/stable-3.13.0-x64
+        run: melos bootstrap --sdk-path /opt/hostedtoolcache/flutter/stable-3.13.0-x64
       
       - name: Run analyzer
         run: flutter analyze .

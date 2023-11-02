@@ -8,7 +8,7 @@ packages:
 command:
   bootstrap:
     hooks:
-      post: melos run generate_localizations --sdk-path ${{ env.GITHUB_ACTION_PATH }}/flutter/stable-3.13.0-x64
+      post: melos run generate_localizations --sdk-path /opt/hostedtoolcache/flutter/stable-3.13.0-x64
 
 scripts:
   analyze:
