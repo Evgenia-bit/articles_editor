@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mapper/src/blocks/block.dart';
 import 'package:mapper/src/models/paragraph_block_model.dart';
+import 'package:mapper/src/utils/export_to_html.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 const monospacedFontFamily = 'packages/mapper/RobotoMono';
@@ -36,5 +37,10 @@ class ParagraphBlock extends Block<ParagraphBlockModel> {
           ),
         )
         .toList();
+  }
+
+  @override
+  String accept(Visitor visitor) {
+    return visitor.exportParagraphBlock(this);
   }
 }

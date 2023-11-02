@@ -15,7 +15,11 @@ dependencies:
     path: ../ui_kit
   video_player: ^2.7.2
 
+dev_dependencies:
+  test: ^1.24.3
+
 flutter:
+  uses-material-design: true
   assets:
     - assets/no_image.png
     - assets/no_video.png
