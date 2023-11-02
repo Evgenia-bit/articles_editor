@@ -1,14 +1,12 @@
 name: artus
 
-sdkPath: .fvm/flutter_sdk
-
 packages:
   - packages/*
 
 command:
   bootstrap:
     hooks:
-      post: melos run generate_localizations
+      post: melos run generate_localizations 
 
 scripts:
   analyze:
