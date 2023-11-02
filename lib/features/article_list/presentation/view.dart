@@ -12,8 +12,12 @@ class ArticleListView extends WidgetView<ArticleListComponent> {
 
   @override
   Widget build(BuildContext context) {
-    final state = component.articleListState;
-    if (state.failure != null) {
+    if (component.loading) {
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
+    }
+    if (component.failure != null) {
       return const FailureScreen(withAppBar: false);
     }
 
@@ -24,9 +28,9 @@ class ArticleListView extends WidgetView<ArticleListComponent> {
           controller: component.scrollController,
           padding: const EdgeInsets.all(16),
           shrinkWrap: true,
-          itemCount: state.articleList.length,
+          itemCount: component.articleList.length,
           itemBuilder: (context, index) => _ArticleListItem(
-            article: state.articleList[index],
+            article: component.articleList[index],
           ),
           separatorBuilder: (context, index) {
             return const SizedBox(height: 20);

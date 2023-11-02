@@ -14,7 +14,7 @@ void main() {
   final widget = ArticleListView(component);
 
   setUp(() {
-    when(() => component.articleListState.articleList)
+    when(() => component.articleList)
         .thenReturn(_mockArticles);
     when(() => component.scrollController).thenReturn(ScrollController());
   });

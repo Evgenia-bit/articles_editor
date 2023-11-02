@@ -1,4 +1,4 @@
-import 'package:artus/features/article_list/domain/models/article_list_state.dart';
+import 'package:artus/features/article_list/domain/models/article_list_item.dart';
 import 'package:artus/features/article_list/domain/use_case.dart';
 import 'package:artus/features/article_list/presentation/article_list_component.dart';
 import 'package:artus/features/article_list/presentation/view.dart';
@@ -43,7 +43,13 @@ class _ArticleListWidgetComponentState
   late final ScrollController scrollController;
 
   @override
-  ArticleListState get articleListState => ArticleListState();
+  List<ArticleListItem> articleList = [];
+
+  @override
+  Exception? failure;
+
+  @override
+  bool loading = true;
 
   Future<void> _loadPage() async {
     if (_isMaxScroll && !_isMaxArticlesCount) {
@@ -53,15 +59,20 @@ class _ArticleListWidgetComponentState
   }
 
   Future<void> _updateArticles() async {
-    final (newArticles, failure) =
+    final (newArticles, error) =
         await widget.loadArticleListUseCase.loadArticles();
+
     if (newArticles != null) {
-      articleListState.articleList.addAll(newArticles);
+      articleList.addAll(newArticles);
     }
-    articleListState.failure = failure;
+
+    failure = error;
+    loading = false;
+
     setState(() {});
+
     if (failure != null) {
-      await widget.failureDisplayer.display(context, failure);
+      await widget.failureDisplayer.display(context, failure!);
     }
   }
 
@@ -70,6 +81,5 @@ class _ArticleListWidgetComponentState
       scrollController.position.maxScrollExtent;
 
   bool get _isMaxArticlesCount =>
-      widget.getArticlesCountUseCase.articlesCount ==
-      articleListState.articleList.length;
+      widget.getArticlesCountUseCase.articlesCount == articleList.length;
 }
