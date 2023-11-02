@@ -2,6 +2,7 @@
   "increment": "Увеличить",
   "decrement": "Уменьшить",
   "text": "Вы нажимали на кнопку столько раз:",
+  "readButtonText": "Читать",
   "failure": "Ошибка",
   "failureUnknown": "Произошла неизвестная ошибка",
   "failureInvalidTitle": "Некорректный заголовок",

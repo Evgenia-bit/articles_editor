@@ -1,18 +1,29 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:api/src/api/articles/data/article_dto.dart';
 import 'package:api/src/utils/safe_cast.dart';
 import 'package:flutter/services.dart';
 
 abstract interface class ArticlesApi {
-  Future<List<ArticleDto>> getAll();
+  /// Returns a Record with a list of articles and the total count of articles.
+  Future<(List<ArticleDto>, int)> getAll({int page, int limit});
   Future<ArticleDto?> getById(int id);
 }
 
 class ArticlesApiStub implements ArticlesApi {
   @override
-  Future<List<ArticleDto>> getAll() async {
-    final articles = await _getData();
-    return articles.map(ArticleDto.fromJson).toList();
+  Future<(List<ArticleDto>, int)> getAll({
+    int page = 0,
+    int limit = 5,
+  }) async {
+    final allArticles = await _getData();
+    final start = page * limit;
+    final end = start + limit;
+    final limitedArticles = allArticles
+        .sublist(start, min(end, allArticles.length))
+        .map(ArticleDto.fromJson)
+        .toList();
+    return (limitedArticles, allArticles.length);
   }
 
   @override

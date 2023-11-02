@@ -2,6 +2,7 @@
   "increment": "Increment",
   "decrement": "Decrement",
   "text": "You have pushed the button this many times:",
+  "readButtonText": "Read",
   "failure": "Error",
   "failureUnknown": "An unknown error has occurred",
   "failureInvalidTitle": "Incorrect title",

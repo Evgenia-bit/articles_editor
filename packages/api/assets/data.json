@@ -3,14 +3,12 @@
         "id": 1,
         "title": "Spring",
         "description": "Article about spring",
-        "image_url": "https://cdn.britannica.com/05/155405-004-2466567A/Spring-flowers-fruit-trees-bloom.jpg",
+        "image_url": "https://cdn.shopify.com/s/files/1/0778/2679/files/bio_urn_trees_f3534a23-d838-4a12-87fc-4dcd5071ed8c_1024x1024.jpg",
         "blocks": [
-
             {
-                "type": "heading",
+                "type": "video",
                 "data": {
-                    "text": "When is the Spring season?",
-                    "level": 3
+                    "url": "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4"
                 }
             },
             {
@@ -18,27 +16,13 @@
                 "data": {
                     "children": [
                         {
-                            "text": "Spring is the season succeeding Winter and preceding Summer. Spring refers to the season as well as to ideas of rebirth, rejuvenation, renewal, resurrection, and regrowth. During spring an important celebration takes place: Easter Day. It varies between March 22 and April 25 in Western tradition, and between April 4 and May 8 in Eastern Christianity.\n\n",
+                            "text": "When is the Spring season?\n\n",
                             "style": {
-                                "is_bold": false,
-                                "is_italic": false,
-                                "is_monospaced": false
+                                "is_bold": true,
+                                "is_italic": true,
+                                "is_monospaced": true
                             }
-                        }
-                    ]
-                }
-            },
-            {
-                "type": "heading",
-                "data": {
-                    "text": "What happens in spring?",
-                    "level": 3
-                }
-            },
-            {
-                "type": "paragraph",
-                "data": {
-                    "children": [
+                        },
                         {
                             "text": "Spring is the season succeeding Winter and preceding Summer. Spring refers to the season as well as to ideas of rebirth, rejuvenation, renewal, resurrection, and regrowth. During spring an important celebration takes place: Easter Day. It varies between March 22 and April 25 in Western tradition, and between April 4 and May 8 in Eastern Christianity.\n\n",
                             "style": {
@@ -46,21 +30,31 @@
                                 "is_italic": false,
                                 "is_monospaced": false
                             }
-                        }
-                    ]
-                }
-            },
-            {
-                "type": "heading",
-                "data": {
-                    "text": "What to do during the Spring Season?",
-                    "level": 3
-                }
-            },
-            {
-                "type": "paragraph",
-                "data": {
-                    "children": [
+                        },
+                        {
+                            "text": "What happens in spring?\n\n",
+                            "style": {
+                                "is_bold": true,
+                                "is_italic": true,
+                                "is_monospaced": true
+                            }
+                        },
+                        {
+                            "text": "Spring is a time when flowers bloom and trees begin to grow and reproduce. The days grow longer and the temperature in most areas becomes more temperate. You can also contemplate the melting of ice and thawing of the ground. The weather during this period becomes much sunnier while hibernating animals begin to come out of hibernation.\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "What to do during the Spring Season?\n\n",
+                            "style": {
+                                "is_bold": true,
+                                "is_italic": true,
+                                "is_monospaced": true
+                            }
+                        },
                         {
                             "text": "There are so many things to do to enjoy spring:",
                             "style": {
@@ -124,7 +118,7 @@
                                     }
                                 },
                                 {
-                                    "text": "in a field of flowers.",
+                                    "text": " in a field of flowers.",
                                     "style": {
                                         "is_bold": false,
                                         "is_italic": false,
@@ -157,9 +151,675 @@
                 }
             },
             {
-                "type": "video",
+                "type": "image",
                 "data": {
-                    "url": "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4"
+                    "url": "https://cdn.britannica.com/05/155405-004-2466567A/Spring-flowers-fruit-trees-bloom.jpg"
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Summer",
+        "description": "Article about summer",
+        "image_url": "https://cdn.britannica.com/05/155405-004-2466567A/Spring-flowers-fruit-trees-bloom.jpg",
+        "blocks": [
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "Summer is the warmest of the four temperate seasons which also include winter, spring, and autumn. It occurs between spring and autumn. It is known for the longest days and shortest nights. The seasons start on different dates in different cultures based on astronomy and regional meteorology. However, when it is summer in the southern hemisphere it is winter in the northern hemisphere, and vice versa. Summer is traditionally associated with hot dry weather, but this does not occur in all regions. For example, the wet season occurs during summer across many parts of the tropics and subtropics. Tropical cyclones develop and roam the tropical and subtropical oceans during the summer. In the interior of continents, thunderstorms are most likely to produce hail during the afternoon and evening. Schools and universities have a summer break to take advantage of the warmer weather and longer days.\n\nPeople take advantage of the warmer temperatures by spending more time outdoors during the summer. Activities such as traveling to the beach and picnics occur during summer months. Sports such as cricket, volleyball, skateboarding, baseball, softball, soccer, tennis, water polo, and football are played. Water skiing is a uniquely summer sport, which is done when waters approach their warmest of the year.\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "Source: Wikipedia",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": true,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Ivory Trade",
+        "description": "Article about ivory trade",
+        "image_url": "https://api.time.com/wp-content/uploads/2016/10/gettyimages-526501330.jpg",
+        "blocks": [
+            {
+                "type": "image",
+                "data": {
+                    "url": "https://api.time.com/wp-content/uploads/2016/10/gettyimages-526501330.jpg"
+                }
+            },
+            {
+                "type": "image",
+                "data": {
+                    "url": "https://cdn.images.express.co.uk/img/dynamic/128/590x/Illegal-ivory-trade-elephant-729554.jpg"
+                }
+            },
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "Ivory trade poses a threat to the very existence of elephants. Ivory hunters were responsible for wiping out elephants in North Africa perhaps about 1,000 years ago, in much of South Africa in the 19th century and most of West Africa by the end of the 20th century. At the peak of the ivory trade, pre 20th century, during the colonization of Africa, around 800 to 1,000 tons of ivory was sent to Europe alone.\n\nElephant ivory has been exported from Africa and Asia for centuries with records going back to the 14th century BC. Throughout the colonization of Africa ivory was removed, often using slaves to carry the tusks, to be used for piano keys, billiard balls and other expressions of exotic wealth.\n\nAlthough many ivory traders repeatedly claimed that the problem was habitat loss, it became glaringly clear that the threat was primarily the international ivory trade.\n\nShould there be a legal trade in elephant ivory? This debate has been going on since at least 1989, when the Convention on International Trade in Endangered Species (CITES) voted to «ban» the international trade in ivory after a ferocious wave of poaching in Africa that left hundreds of thousands of elephants butchered.\n\nWhile some conservationists say that a limited legal ivory trade is needed to satiate demand, especially in China, in a controlled manner, environmental activists ask whether elephants can survive a legal ivory trade. They argue that the 1989 ban must be kept in place to protect elephants, especially now that poaching has once again risen to catastrophic levels.",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "Source: Wikipedia",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": true,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Dolphins’ Social Behavior",
+        "description": "Article about dolphins’ social behavior",
+        "image_url": "https://www.osp.ru/FileStorage/DOCUMENTS_ILLUSTRATIONS/13235306/original.jpg",
+        "blocks": [
+            {
+                "type": "image",
+                "data": {
+                    "url": "https://cdnn21.img.ria.ru/images/95141/41/951414143_0:120:1200:799_600x0_80_0_0_24358851a1cf59fecd2e3c6f4bb885dd.jpg"
+                }
+            },
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "Dolphins are often regarded as one of Earth’s most intelligent animals. They are social creatures, living in pods of up to a dozen individuals. In places with a high abundance of food, pods can merge temporarily, forming a superpod; such groupings may exceed 1,000 dolphins. They communicate using a variety of clicks, whistle-like sounds and other vocalizations.\n\nMembership in pods is not rigid; interchange is common. Dolphins can, however, establish strong social bonds; they will stay with injured or ill individuals, even helping them to breathe by bringing them to the surface if needed. This altruism does not appear to be limited to their own species. The dolphin Moko in New Zealand has been observed guiding a female Pygmy Sperm Whale together with her calf out of shallow water where they had stranded several times. They have also been seen protecting swimmers from sharks by swimming circles around the swimmers or charging the sharks to make them go away.\n\nDolphins also display culture, something long believed to be unique to humans. In May 2005, a discovery in Australia found Indo-Pacific bottlenose dolphins teaching their young to use tools. They cover their snouts with sponges to protect them while foraging (looking or searching for food or provisions.) Using sponges as mouth protection as well as other transmitted behavior proves dolphins’ intelligence. This knowledge is mostly transferred by mothers to daughters.",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "Source: Wikipedia",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": true,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "The Great Wall of China",
+        "description": "Article about The Great Wall of China",
+        "image_url": "https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2023/02/02192048/great-wall-of-china.jpeg",
+        "blocks": [
+            {
+                "type": "image",
+                "data": {
+                    "url": "https://cdn.britannica.com/82/94382-050-20CF23DB/Great-Wall-of-China-Beijing.jpg"
+                }
+            },
+            {
+                "type": "image",
+                "data": {
+                    "url": "https://th-thumbnailer.cdn-si-edu.com/tTWLQXzOH6vwsp7kSFf6Td7ZpZc=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/80/fa/80facab4-fe0e-4a56-bd99-a71eb1845fa0/01_14_2014_great_wall.jpg"
+                }
+            },
+            {
+                "type": "image",
+                "data": {
+                    "url": "https://cdn.britannica.com/05/19805-050-1B7FC648/Great-Wall-of-China-Asia-World-Heritage-1987.jpg"
+                }
+            },
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "The Great Wall of China, one of the greatest wonders of the world, was first built between 220–206 BC. In fact, it began as independent walls for different states when it was first built, and did not become the «Great» wall until the Qin Dynasty. Emperor Qin Shihuang succeeded in his effort to have the walls joined together to serve as fortification to protect the northern borders of the Chinese Empire from invasion. Afterwards it was rebuilt and maintained over the years, between the 5th century BC and the 16th century.\n\nOne of the myths associated with the Great Wall of China is that it is the only man-made structure that can be seen from the Moon with the naked eye. The legend originated in Richard Halliburton’s 1938 book Second Book of Marvels. However, this myth is simply not true. Richard Halliburton’s claim was contradicted by astronauts Neil Armstrong and Yang Liwei. A more plausible assumption would be to say that the Great Wall can be visible from a low orbit of the Earth which is not unique in this regard as many other artificial constructions can be seen from that height.\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "Source: Wikipedia",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": true,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Earth Day",
+        "description": "Article about Earth Day",
+        "image_url": "https://op.yanao.ru/upload/medialibrary/814/8141a83e143924e5153fb7232d4872a1.jpg",
+        "blocks": [
+            {
+                "type": "image",
+                "data": {
+                    "url": "https://tmgnews.ru/media/publications/6960559914/cover/af43127bb0a652769ab4ab076791cd5e.jpeg"
+                }
+            },
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "Many countries around the world celebrate Earth Day. It is a day that is meant to raise awareness and appreciation about the Earth’s natural environment.\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": true,
+                                "is_monospaced": true
+                            }
+                        },
+                        {
+                            "text": "The first Earth Day was held in the USA. It was founded by United States Senator Gaylord Nelson as an environmental teach-in – a sort of general educational forum or seminar. That was on April 22, 1970. While this first ",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "Earth Day",
+                            "style": {
+                                "is_bold": true,
+                                "is_italic": true,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": " was focused on the United States, an organization launched by Denis Hayes, who was the original national coordinator in 1970, took it international in 1990 and organized events in 141 nations.\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "Earth Day is now coordinated globally by the Earth Day Network, and is celebrated in more than 175 countries every year. Numerous communities celebrate Earth Week, an entire week of activities focused on environmental issues. In 2009, the United Nations designated April 22 International Mother Earth Day.\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "Source: Wikipedia",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": true,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "What does cloud computing mean?",
+        "description": "Article about cloud computing",
+        "image_url": "https://serverspace.ru/wp-content/uploads/2019/06/iaas-dlya-shkolnikov.png",
+        "blocks": [
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "Cloud computing means storing and accessing data and programs over the Internet instead of your computer’s hard drive. It involves computing over a network, where a program or application may run on many connected computers at the same time.\n\nFor some, cloud computing is a metaphor for the Internet. It typically uses connected hardware machines called servers. Individual users can use the server’s processing power to run an application, store data, or perform any other computing task. Thus, instead of using a personal computer every-time to run the application, the individual can now run the application from anywhere in the world.\n\nFor businesses, cloud computing is an ideal way to reduce expenses. For example, companies may buy services in the cloud. That is to say, instead of installing applications on every single computer in the company, cloud computing would allow workers to log into a Web-based service (a cloud) which hosts all the programs individual users would need for their job. Everything would run on remote machines and local computers task would rely just on connecting to those machines.\n\nWhile cloud computing could change the entire computer industry, there are still some concerns about the security of the data stored on the remote machines. It is true that it promises to offload many tasks. However, this technology raises a fundamental question. Is it safe to store one’s data on someone else’s computer? The cloud service provider needs to establish clear and relevant policies that describe how the data of each cloud user will be accessed and used. Cloud service users should also be able to encrypt data that is processed or stored within the cloud to prevent unauthorized access.\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "Source: Wikipedia",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": true,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Global Warming",
+        "description": "Article about global Warming ",
+        "image_url": "https://cdnn21.img.ria.ru/images/148579/20/1485792004_0:220:5727:3441_1920x0_80_0_0_304a35d0d22b26798196076532fb4844.jpg",
+        "blocks": [
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "Global warming is something we cannot ignore. It is reported that in the last 5 years the average temperatures on Earth have increased. Let’s discuss how we can stop it and make our planet better.\n\nBut first, let’s figure out what causes global warming. Climate change is caused by different reasons. There are many factories and power plants that create a lot of heat. That heat increases the overall temperature on Earth. The growing consumption of electricity also worsens the problem. The more we consume, the more heat is coming to the atmosphere, and the warmer it becomes.\n\n But why exactly global warming is a threat? The most dangerous part of the problem is the fact that the heat can reach the North and South Poles. If it happens, thousands of icebergs will start to melt. In the end, the overall water level will increase. Many coastal cities and islands will end up drowned. But there is still hope for mankind.\n\nGlobal warming can be prevented if we all work together. We should use green energy, the kind of energy that comes from the sources that cause little or no impact on the environment. There are such green energy sources as solar panels, wind power stations and hydroelectric power plants. Some countries already decided to switch completely to alternative power sources by 2040. In conclusion, I would like to say that we are facing this problem for the first time. If we do the right things, we can make our world a better place.",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Seven ways to protect the environment",
+        "description": "Article about seven ways to protect the environment",
+        "blocks": [
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "We all want to protect our planet, but we’re mostly too busy or too lazy to put up big change that would improve our lifestyle and save the environment.\n\nThese are 7 simple habits to implement in your everyday life which will make a difference. There is nothing new here but if you follow at least some of these tips, you can be proud of yourself participating in the protection of the environment.\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "list",
+                "data": {
+                    "type": "ORDERED",
+                    "items": [
+                        {
+                            "children": [
+                                {
+                                    "text": "Use compact fluorescent light bulbs:\n\nIt is true that these bulbs are more expensive, but they last much longer and they can save energy and in the long term your electricity bill would be reduced.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Donate:\n\nYou have tons of clothes or things you want to get rid of. If they are still usable, give them to someone who needs them. You may also choose to give them to associations. These associations may sell them and collect a little money. Not only will you protect the environment, but you will also contribute to a good cause.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Turn off your devices:\n\nWhen you do not use a house device, turn it off. For example, if you don’t watch TV, turn it off. Turn off the light when you leave a room (even if you intend to return.) It’s an easy habit to take up which will help you save a lot of money.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Walk or cycle:\n\nDriving is one of the biggest causes of pollution. If you want to use your car, ask yourself the following question: do I really need my car? Walk or use your bike if the journey is a short one.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Detergent:\n\nFollow the recommended dose of detergent to wash your clothes or dishes.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Leaky faucets:\n\nWatch leaky faucets, which can cause a significant increase in the water bill. An average of 120 liters of water can be wasted due to a dripping faucet.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Rainwater:\n\nThink of recovering rainwater. This water can be used for different purposes.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "This list is far from being exhaustive but in addition to saving the environment, all these tips will help you save money.",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Sustainable Development",
+        "description": "Article about sustainable development",
+        "image_url": "https://bcdn.products.pcc.eu/wp-content/uploads/2022/04/FOT1-zrownowazony-rozwoj.jpg",
+        "blocks": [
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "The best definition of Sustainable development was presented by the report",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": " Our Common Future ",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": true,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "(also known as the Brundtland Report):\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        },
+                        {
+                            "text": "\"Sustainable development is development that meets the needs of the present without compromising the ability of future generations to meet their own needs.\"\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": true,
+                                "is_monospaced": true
+                            }
+                        },
+                        {
+                            "text": "Sustainable development is thus the ability to meet the needs of the present while contributing to the future generations’ needs. It focuses on two goals:\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": true,
+                                "is_monospaced": true
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "list",
+                "data": {
+                    "type": "ORDERED",
+                    "items": [
+                        {
+                            "children": [
+                                {
+                                    "text": "To improve the quality of life for all of the Earth’s citizens.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "To stop using up the natural resources beyond the capacity of the environment to supply them indefinitely.",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "Green development is generally differentiated from sustainable development in that Green development prioritizes what its proponents consider to be environmental sustainability over economic and cultural considerations. In addition to that, sustainable development has underlying concepts: the concept of ‘needs’, in particular the essential needs of the world’s poor, to which overriding priority should be given; and the idea of limitations imposed by the state of technology and social organization on the environment’s ability to meet present and future needs. There is an additional focus on the present generations’ responsibility to improve the future generations’ life by restoring the previous ecosystem damage and resisting to further ecosystem damage.\n\nSustainable development requires action on the part of world states, governments and people. The detrimental situation of the environment, the enormous stress upon our natural resources and the huge gap between developed and underdeveloped countries necessitate practical strategies to reverse the trends. The World Commission on Environment and Development suggested seven critical objectives for environment and development policies that follow from the concept of sustainable development:\n\n",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "list",
+                "data": {
+                    "type": "BULLETED",
+                    "items": [
+                        {
+                            "children": [
+                                {
+                                    "text": "Reviving growth",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Changing the quality of growth",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Meeting essential needs such as for jobs, food, energy, water and sanitation",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Ensuring a sustainable level of population",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Conserving and enhancing the resource base",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Reorienting technology and manage risk",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "Including and combining environment and economics considerations in decision-making",
+                                    "style": {
+                                        "is_bold": false,
+                                        "is_italic": false,
+                                        "is_monospaced": false
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "These recommendations are still valid; to do things differently is dangerous and condemnable. Slow actions would be detrimental.",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Walt Disney",
+        "description": "Article about Walt Disney",
+        "image_url": "https://cdn.britannica.com/70/24470-050-C0951667/Walt-Disney.jpg",
+        "blocks": [
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "Walt Disney was born on December 5, 1901. Disney became one of the best-known motion picture producers in the world. He is particularly noted for being a film producer and a popular showman, as well as an innovator in animation and theme park design.\n\nDisney is famous for his contributions in the field of entertainment during the 20th century. His first success was through the series, Oswald the Lucky Rabbit which was created by the Disney studio for Charles Mintz of Universal Studios. When Disney asked for a larger budget for his popular Oswald series, Mintz refused and Disney had to quit. Later, Disney and his brother Roy O. Disney started from scratch and co-founded Walt Disney Productions, now known as The Walt Disney Company. Today, this company has annual revenues of approximately U.S. $35 billion. This success is largely due to a number of the world’s most famous fictional characters he and his staff created including Mickey Mouse, a character for which Disney himself was the original voice.\n\nDisney won 26 Academy Awards out of 59 nominations, including a record four in one year, giving him more awards and nominations than any other individual. He is also the namesake for Disneyland and Walt Disney World Resort theme parks in the United States, as well as the international resorts in Japan, France, and China.\n\nDisney died of lung cancer in Burbank, California, on December 15, 1966. The following year, construction began on Walt Disney World Resort in Florida. His brother Roy Disney inaugurated The Magic Kingdom on October 1, 1971.",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": true
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Stereotype",
+        "description": "Article about stereotype",
+        "blocks": [
+            {
+                "type": "paragraph",
+                "data": {
+                    "children": [
+                        {
+                            "text": "A stereotype is a fixed idea that people have about what specific social groups or individuals are like, especially an idea that is wrong. Other terms that are associated with the term stereotype are prejudice and cliché. The term has a Greek origin: stereos means solid or firm and typos mean impression, engraved or mark. The term was first used in the printing business. The first modern English use of the term was in 1850, meaning \"image perpetuated without change.\"\n\nBecause stereotypes are standardized and simplified ideas of groups, based on some prejudices, they are not derived from objective facts, but rather subjective and often unverifiable ideas. As Sociologist Charles E. Hurst states “One reason for stereotypes is the lack of personal, concrete familiarity that individuals have with persons in other racial or ethnic groups.”\n\nThe existence of stereotypes may be explained by the need of groups of people to view themselves as more normal or more superior than other groups. Consequently, stereotypes may be used to justify ill-founded prejudices or ignorance and prevent people of stereotyped groups from entering or succeeding in various activities or fields. The stereotyping groups are, generally, reluctant to reconsider their attitudes and behavior towards stereotyped group.\n\nStereotypes may affect people negatively. This includes forming inaccurate and distorted images and opinions of people. Stereotypes may also be used for scapegoating or for making general erroneous judgments about people. Some stereotyping people may feel comfortable when they prevent themselves from emotional identification with the stereotyped group, which leads to xenophobic or racist behavior. Finally another serious consequence of stereotypes is the feeling of inferiority that the stereotyped people may have and which may impair their performance.",
+                            "style": {
+                                "is_bold": false,
+                                "is_italic": false,
+                                "is_monospaced": true
+                            }
+                        }
+                    ]
                 }
             }
         ]

@@ -1,5 +1,5 @@
 import 'package:artus/features/app/di/app_assembly.dart';
-import 'package:artus/features/article/di/entry.dart';
+import 'package:artus/router.dart';
 import 'package:flutter/material.dart';
 import 'package:localizations/localizations.dart';
 import 'package:ui_kit/ui_kit.dart';
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -20,10 +20,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       theme: AppThemeData.lightTheme,
       darkTheme: AppThemeData.darkTheme,
-      home: ArticleEntry(
-        appAssembly: appAssembly,
-        articleId: 1,
-      ),
+      routerConfig: router(appAssembly),
     );
   }
 }
