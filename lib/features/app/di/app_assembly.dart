@@ -7,7 +7,7 @@ class AppAssembly implements IAppAssembly {
   late final ArticlesApi _articlesApi;
   late final BlockParser _blockParser;
   late final Mapper _mapper;
-  late final LogWriter _logger; 
+  late final LogWriter _logger;
 
   @override
   ArticlesApi get articlesApi => _articlesApi;
