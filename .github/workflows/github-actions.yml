@@ -24,7 +24,7 @@ jobs:
         run: flutter doctor
 
       - name: Bootstrap
-        run: melos bootstrap --sdk-path /
+        run: melos bootstrap --sdk-path /opt/hostedtoolcache/flutter/stable-3.13.0-x64
       
       - name: Run analyzer
         run: flutter analyze .
