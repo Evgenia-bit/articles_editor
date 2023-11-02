@@ -1,4 +1,4 @@
-import 'package:artus/features/article_list/data/models/article_list_item.dart';
+import 'package:artus/features/article_list/domain/models/article_list_state.dart';
 import 'package:artus/features/article_list/domain/use_case.dart';
 import 'package:artus/features/article_list/presentation/article_list_component.dart';
 import 'package:artus/features/article_list/presentation/view.dart';
@@ -10,12 +10,14 @@ class ArticleListWidgetComponent extends StatefulWidget {
     required this.incrementCurrentPageUseCase,
     required this.loadArticleListUseCase,
     required this.getArticlesCountUseCase,
+    required this.failureDisplayer,
     super.key,
   });
 
   final IncrementCurrentPageUseCase incrementCurrentPageUseCase;
   final LoadArticleListUseCase loadArticleListUseCase;
   final GetArticlesCountUseCase getArticlesCountUseCase;
+  final FailureDisplayer failureDisplayer;
 
   @override
   State createState() => _ArticleListWidgetComponentState();
@@ -41,10 +43,7 @@ class _ArticleListWidgetComponentState
   late final ScrollController scrollController;
 
   @override
-  List<ArticleListItem> articles = [];
-
-  @override
-  String? failureMessage;
+  ArticleListState get articleListState => ArticleListState();
 
   Future<void> _loadPage() async {
     if (_isMaxScroll && !_isMaxArticlesCount) {
@@ -54,12 +53,16 @@ class _ArticleListWidgetComponentState
   }
 
   Future<void> _updateArticles() async {
-    final (newArticles, error) =
+    final (newArticles, failure) =
         await widget.loadArticleListUseCase.loadArticles();
-    setState(() {
-      articles.addAll(newArticles);
-      failureMessage = error;
-    });
+    if (newArticles != null) {
+      articleListState.articleList.addAll(newArticles);
+    }
+    articleListState.failure = failure;
+    setState(() {});
+    if (failure != null) {
+      await widget.failureDisplayer.display(context, failure);
+    }
   }
 
   bool get _isMaxScroll =>
@@ -67,5 +70,6 @@ class _ArticleListWidgetComponentState
       scrollController.position.maxScrollExtent;
 
   bool get _isMaxArticlesCount =>
-      widget.getArticlesCountUseCase.articlesCount == articles.length;
+      widget.getArticlesCountUseCase.articlesCount ==
+      articleListState.articleList.length;
 }

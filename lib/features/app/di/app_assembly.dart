@@ -9,7 +9,7 @@ class AppAssembly implements IAppAssembly {
   late final BlockParser _blockParser;
   late final Mapper _mapper;
   late final LogWriter _logger;
-  late final MessageController _messageController;
+  late final FailureDisplayer _failureDisplayer;
 
   @override
   ArticlesApi get articlesApi => _articlesApi;
@@ -24,13 +24,13 @@ class AppAssembly implements IAppAssembly {
   LogWriter get logger => _logger;
 
   @override
-  MessageController get messageController => _messageController;
+  FailureDisplayer get failureDisplayer => _failureDisplayer;
 
   AppAssembly() {
     _articlesApi = ArticlesApiStub();
     _blockParser = BlockParser();
     _mapper = Mapper(blockParser: _blockParser);
     _logger = Logger.withStrategies({SimpleLogStrategy()});
-    _messageController = MessageController();
+    _failureDisplayer = FailureDisplayer(MessageController());
   }
 }

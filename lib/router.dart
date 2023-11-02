@@ -1,49 +1,31 @@
-import 'package:api/api.dart';
-import 'package:artus/features/article/data/article_repository.dart';
-import 'package:artus/features/article/presentation/widget_component.dart';
-import 'package:artus/features/article_list/data/article_list_repository.dart';
-import 'package:artus/features/article_list/presentation/widget_component.dart';
-import 'package:flutter/widgets.dart';
+import 'package:artus/features/app/di/app_assembly.dart';
+import 'package:artus/features/article/di/entry.dart';
+import 'package:artus/features/article_list/di/entry.dart';
+import 'package:artus/features/common/widgets/failure_screen.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mapper/mapper.dart';
 
-final router = GoRouter(
-  routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) {
-        // TODO(Evgenia-bit): add DI
-        final repository = ArticleListRepository(
-          currentPage: 0,
-          api: ArticlesApiStub(),
-        );
-        return ArticleListWidgetComponent(
-          incrementCurrentPageUseCase: repository,
-          loadArticleListUseCase: repository,
-          getArticlesCountUseCase: repository,
-        );
-      },
+GoRouter router(AppAssembly appAssembly) => GoRouter(
       routes: [
         GoRoute(
-          path: 'article/:id',
+          path: '/',
           builder: (context, state) {
-            final id = int.tryParse(state.pathParameters['id'] ?? '');
-            if (id == null) {
-              return const SizedBox.shrink();
-            }
-            // TODO(Evgenia-bit): add DI
-            final repository = ArticleRepository(
-              articleId: id,
-              api: ArticlesApiStub(),
-              mapper: Mapper(blockParser: BlockParser()),
-            );
-
-            return ArticleWidgetComponent(
-              loadArticleUseCase: repository,
-            );
+            return ArticleListEntry(appAssembly: appAssembly);
           },
+          routes: [
+            GoRoute(
+              path: 'article/:id',
+              builder: (context, state) {
+                final id = int.tryParse(state.pathParameters['id'] ?? '');
+                if (id == null) {
+                  return const FailureScreen();
+                }
+                return ArticleEntry(
+                  appAssembly: appAssembly,
+                  articleId: id,
+                );
+              },
+            ),
+          ],
         ),
       ],
-    ),
-  ],
-);
+    );

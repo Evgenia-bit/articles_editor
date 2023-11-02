@@ -1,4 +1,4 @@
-import 'package:artus/features/article_list/data/models/article_list_item.dart';
+import 'package:artus/features/article_list/domain/models/article_list_item.dart';
 import 'package:artus/features/article_list/presentation/article_list_component.dart';
 import 'package:artus/features/article_list/presentation/view.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,8 @@ void main() {
   final widget = ArticleListView(component);
 
   setUp(() {
-    when(() => component.articles).thenReturn(_mockArticles);
+    when(() => component.articleListState.articleList)
+        .thenReturn(_mockArticles);
     when(() => component.scrollController).thenReturn(ScrollController());
   });
 

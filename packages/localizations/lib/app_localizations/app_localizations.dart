@@ -120,12 +120,6 @@ abstract class AppLocalizations {
   /// **'Read'**
   String get readButtonText;
 
-  /// No description provided for @readButtonText.
-  ///
-  /// In en, this message translates to:
-  /// **'Read'**
-  String get readButtonText;
-
   /// No description provided for @failure.
   ///
   /// In en, this message translates to:

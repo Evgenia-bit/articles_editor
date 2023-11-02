@@ -17,9 +17,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get readButtonText => 'Read';
 
   @override
-  String get readButtonText => 'Read';
-
-  @override
   String get failure => 'Error';
 
   @override

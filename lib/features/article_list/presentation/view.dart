@@ -1,4 +1,4 @@
-import 'package:artus/features/article_list/data/models/article_list_item.dart';
+import 'package:artus/features/article_list/domain/models/article_list_item.dart';
 import 'package:artus/features/article_list/presentation/article_list_component.dart';
 import 'package:artus/features/common/widgets/failure_screen.dart';
 import 'package:core/core.dart';
@@ -12,11 +12,9 @@ class ArticleListView extends WidgetView<ArticleListComponent> {
 
   @override
   Widget build(BuildContext context) {
-    if (component.failureMessage != null) {
-      return FailureScreen(
-        text: component.failureMessage!,
-        withAppBar: false,
-      );
+    final state = component.articleListState;
+    if (state.failure != null) {
+      return const FailureScreen(withAppBar: false);
     }
 
     return ColoredBox(
@@ -26,9 +24,9 @@ class ArticleListView extends WidgetView<ArticleListComponent> {
           controller: component.scrollController,
           padding: const EdgeInsets.all(16),
           shrinkWrap: true,
-          itemCount: component.articles.length,
+          itemCount: state.articleList.length,
           itemBuilder: (context, index) => _ArticleListItem(
-            article: component.articles[index],
+            article: state.articleList[index],
           ),
           separatorBuilder: (context, index) {
             return const SizedBox(height: 20);

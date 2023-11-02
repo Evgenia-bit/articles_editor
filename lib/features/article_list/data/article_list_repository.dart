@@ -1,6 +1,7 @@
 import 'package:api/api.dart';
-import 'package:artus/features/article_list/data/models/article_list_item.dart';
+import 'package:artus/features/article_list/domain/models/article_list_item.dart';
 import 'package:artus/features/article_list/domain/use_case.dart';
+import 'package:artus_logger/logger.dart';
 
 class ArticleListRepository
     implements
@@ -11,9 +12,12 @@ class ArticleListRepository
   ArticleListRepository({
     required this.currentPage,
     required ArticlesApi api,
-  }) : _api = api;
+    required LogWriter logger,
+  })  : _api = api,
+        _logger = logger;
 
   final ArticlesApi _api;
+  final LogWriter _logger;
 
   @override
   int currentPage;
@@ -25,7 +29,7 @@ class ArticleListRepository
   int articlesCount = 0;
 
   @override
-  Future<(List<ArticleListItem>, String?)> loadArticles({
+  Future<(List<ArticleListItem>?, Exception?)> loadArticles({
     int page = 0,
     int limit = 5,
   }) async {
@@ -47,10 +51,11 @@ class ArticleListRepository
               ),
             )
             .toList(),
-        null
+        null,
       );
-    } catch (e) {
-      return (<ArticleListItem>[], 'An error has occurred');
+    } on Exception catch (e) {
+      _logger.e(e);
+      return (null, e);
     }
   }
 }
